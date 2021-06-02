@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
+    "install": "^0.13.0",
+    "npm": "^7.15.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
     "react-datetime": "^3.0.4",
