@@ -2,7 +2,7 @@
 // import "@fullcalendar/daygrid/main.css";  
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import interactionPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/daygrid";
 import React from 'react'
 
@@ -13,6 +13,26 @@ const appointments2 = [{ title: "Month", date: new Date() }];
 
 function Calendar()
 {
+    const handleDateClick = (dateClickInfo) =>
+    {
+        console.log(dateClickInfo.dateStr);
+    }
+
+
+    const injectCellContent = (args) =>
+    {
+        return (
+            <div>
+                <button onClick={() => saveRecord(args.date)}>
+                    {args.dayNumberText}
+                </button>
+            </div>
+        )
+    }
+    const saveRecord = (date) =>
+    {
+        alert(`You Clicked on ${ date }`)
+    }
 
     return (
         <div className="container">
@@ -22,11 +42,12 @@ function Calendar()
                                 </div>
             </div>
             <FullCalendar
-                plugins={[dayGridPlugin, dayGridPlugin, interactionPlugin, timeGridPlugin]}
+                plugins={[dayGridPlugin, interactionPlugin]}
                 editable={true}
+                dateClick={handleDateClick}
                 defaultView="dayGridMonth"
-                plugins={[dayGridPlugin]}
                 events={appointments, appointments2}
+                dayCellContent={injectCellContent}
             />
 
         </div>

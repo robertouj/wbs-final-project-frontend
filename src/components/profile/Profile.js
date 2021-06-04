@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+
 
 import BreadCrumbNav from './BreadCrumbNav'
 
-const Profile = () => {
-    return ( 
+const Profile = () =>
+{
+    return (
         <>
-         <BreadCrumbNav />
+            <BreadCrumbNav />
         </>
-     );
+    );
 }
- 
+
 export default Profile;
