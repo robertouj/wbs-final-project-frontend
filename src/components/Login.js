@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { ArrowRight } from 'react-bootstrap-icons';
+import AuthForm from './Auth/AuthForm';
 
 export default function Login() {
     return (
         <div>
+            <AuthForm />
              <Container className="m-auto p-3">
                 <Row>
                     <Col lg={4} md={6} sm={12} className="text-center m-auto p-3">

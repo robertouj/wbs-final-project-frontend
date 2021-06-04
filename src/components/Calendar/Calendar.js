@@ -12,7 +12,7 @@ const appointments = [{ title: "Today", date: new Date() }];
 const appointments2 = [{ title: "Month", date: new Date() }];
 
 function Calendar()
-{
+{    
 
     return (
         <div className="container">
