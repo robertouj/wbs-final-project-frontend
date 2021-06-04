@@ -12,27 +12,7 @@ const appointments = [{ title: "Today", date: new Date() }];
 const appointments2 = [{ title: "Month", date: new Date() }];
 
 function Calendar()
-{
-    const handleDateClick = (dateClickInfo) =>
-    {
-        console.log(dateClickInfo.dateStr);
-    }
-
-
-    const injectCellContent = (args) =>
-    {
-        return (
-            <div>
-                <button onClick={() => saveRecord(args.date)}>
-                    {args.dayNumberText}
-                </button>
-            </div>
-        )
-    }
-    const saveRecord = (date) =>
-    {
-        alert(`You Clicked on ${ date }`)
-    }
+{    
 
     return (
         <div className="container">
