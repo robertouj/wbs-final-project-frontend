@@ -48,10 +48,10 @@ function App()
       <div className="App">
         <MainNavBar />
         <SearchBar onSearch={onSearch} />
-        <CardList selectedMentor={selectedMentor} />   
-        
-        
-        
+        <CardList selectedMentor={selectedMentor} />
+
+
+
       </div>
 
     </>
