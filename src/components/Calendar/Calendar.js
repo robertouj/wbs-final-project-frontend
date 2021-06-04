@@ -2,7 +2,7 @@
 // import "@fullcalendar/daygrid/main.css";  
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import interactionPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/daygrid";
 import React from 'react'
 
@@ -22,11 +22,12 @@ function Calendar()
                                 </div>
             </div>
             <FullCalendar
-                plugins={[dayGridPlugin, dayGridPlugin, interactionPlugin, timeGridPlugin]}
+                plugins={[dayGridPlugin, interactionPlugin]}
                 editable={true}
+                dateClick={handleDateClick}
                 defaultView="dayGridMonth"
-                plugins={[dayGridPlugin]}
                 events={appointments, appointments2}
+                dayCellContent={injectCellContent}
             />
 
         </div>
