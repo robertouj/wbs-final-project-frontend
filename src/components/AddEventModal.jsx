@@ -34,6 +34,7 @@ export default function AddEventModal({isOpen, onClose, onEventAdded}) {
                         <label>End Date</label>
                     <Datetime valu={start} onChange={date => setStart(date)} />
                     </div>
+                    <button>Add event</button>
                     </form>
             </Modal>
         </div>

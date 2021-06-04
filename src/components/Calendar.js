@@ -25,8 +25,9 @@ function Calendar() {
                                 <div class="col-sm-12 btn btn-info">  
                                     Calendar  
                         </div>  
-                        <button>add event</button>
+                        <button onclick={() => setModalopen()} >add event</button>
                             </div>  
+                            <div style={{position: "relative", zIndex: 0}}>
                             <FullCalendar  
                                 ref={calendarRef}
                                 plugins={[ dayGridPlugin,  dayGridPlugin, interactionPlugin, timeGridPlugin ]}
@@ -34,8 +35,10 @@ function Calendar() {
                                 defaultView="dayGridMonth"  
                                 plugins={[dayGridPlugin]}  
                                 events={appointments, appointments2}  
-                            />  
-                            <AddeventModal 
+                            />
+                            </div>
+                              
+                            <AddEventModal 
                             isOpen={modalOpen} 
                             onClose={() => setModalOpen(false)} 
                             onEventAdded={ event => onEventadded(event)} />
