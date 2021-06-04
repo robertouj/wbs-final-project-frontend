@@ -1,17 +1,13 @@
-import Profile from "./components/Profile"
 // import './App.css';
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Calendar from './components/Calendar' 
-import Calendar1 from './components/Calendar1' 
-import Calendar2 from "./components/Calendar2"
 import SearchBar from './components/SearchBar'
 import axios from "axios"
 import Data from './TestData.json'
-import CardList from "./components/CardList"
-import Modal from 'react-modal';
+import CardList from "./components/Cards/CardList"
+import MainNavBar from './components/MainNavBar'
 
-Modal.setAppElement('#root')
+
 
 // import FullCalendar from '@fullcalendar/react'
 // import dayGridPlugin from '@fullcalendar/daygrid'
@@ -26,7 +22,8 @@ Modal.setAppElement('#root')
 //   day: 'numeric'
 // });
 
-function App() {
+function App()
+{
 
 
   const [selectedMentor, setSelectedMentor] = useState('');
@@ -48,14 +45,14 @@ function App() {
 
   return (
     <>
-    <div className="App">
-      <Profile />
-      <SearchBar onSearch={onSearch} />
-      <CardList selectedMentor={selectedMentor} />
-      <Calendar />
-      <Calendar1 /> 
-      {/* <Calendar2 /> */}
-    </div>
+      <div className="App">
+        <MainNavBar />
+        <SearchBar onSearch={onSearch} />
+        <CardList selectedMentor={selectedMentor} />   
+        
+        
+        
+      </div>
 
     </>
 
