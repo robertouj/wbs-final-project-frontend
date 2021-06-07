@@ -44,7 +44,7 @@ const AddSkill = ({ text, setText, skills, setSkills }) =>
         ])
         setText('');
     }
-    console.log(skills)
+    // console.log(skills)
     return (
         <>
             <Container>
