@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import SearchBar from './components/SearchBar'
 import axios from "axios"
-import Data from './TestData.json'
+import Data from './MockData.json'
 import CardList from "./components/Cards/CardList"
 import MainNavBar from './components/MainNavBar'
 
@@ -26,7 +26,7 @@ function App()
 {
 
 
-  const [selectedMentor, setSelectedMentor] = useState('');
+  const [selectedMentors, setSelectedMentors] = useState('');
   const [mentors, setMentors] = useState(Data);
 
 
@@ -34,21 +34,26 @@ function App()
   {
     const selecting = mentors.filter(i =>
     {
-      if (i.mentor.toLowerCase() === text) {
-        return i.mentor
+
+
+      if (i.skills.filter(e => e === text)) {
+        return i
+      } else {
+        alert('cant find what you are looking for')
       }
     })
-    console.log(selecting)
-    setSelectedMentor(selecting)
+
+    // console.log(selecting)
+    setSelectedMentors(selecting)
   }
-  console.log(selectedMentor)
+  // console.log(selectedMentor)
 
   return (
     <>
       <div className="App">
         <MainNavBar />
         <SearchBar onSearch={onSearch} />
-        <CardList selectedMentor={selectedMentor} />
+        <CardList selectedMentors={selectedMentors} />
 
 
 

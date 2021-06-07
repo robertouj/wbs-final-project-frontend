@@ -29,12 +29,3 @@
     }
 
 ]
-user_id
-nickname
-photo
-bio
-experience
-availability[
-    schedule,
-    live
-]
