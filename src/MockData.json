@@ -1,13 +1,8 @@
-[{
-    "id": "40",
-    "mentor": "Dimitris",
-    "skills": [
-        "React", "Mongo", "nodeJS"
-    ]
-},
+[
 {
     "user_Id": "1",
     "nickname": "Roberto",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -19,6 +14,7 @@
 {
     "user_Id": "2",
     "nickname": "Daniel",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -30,6 +26,7 @@
 {
     "user_Id": "3",
     "nickname": "Ahmad",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -41,6 +38,7 @@
 {
     "user_Id": "4",
     "nickname": "Dimitris",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -52,6 +50,7 @@
 {
     "user_Id": "5",
     "nickname": "Henning",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -63,6 +62,7 @@
 {
     "user_Id": "6",
     "nickname": "Marc",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
@@ -74,6 +74,7 @@
 {
     "user_Id": "7",
     "nickname": "Jan",
+    "skills": ["react", "javascript"],
     "photo": "link",
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
