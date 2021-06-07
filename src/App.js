@@ -6,6 +6,8 @@ import axios from "axios"
 import Data from './MockData.json'
 import CardList from "./components/Cards/CardList"
 import MainNavBar from './components/MainNavBar'
+import Cards from './components/Cards/Cards'
+import { Card } from 'react-bootstrap'
 
 
 
@@ -24,7 +26,6 @@ import MainNavBar from './components/MainNavBar'
 
 function App()
 {
-
 
   const [selectedMentors, setSelectedMentors] = useState('');
   const [mentors, setMentors] = useState(Data);
@@ -54,6 +55,7 @@ function App()
         <MainNavBar />
         <SearchBar onSearch={onSearch} />
         <CardList selectedMentors={selectedMentors} />
+        <Cards />
 
 
 

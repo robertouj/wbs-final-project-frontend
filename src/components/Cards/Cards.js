@@ -2,17 +2,17 @@ import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Data from "../../MockData.json"
 
-export default function Cards({ title }) {
+export default function Cards({ nickname, bio }) {
     return (
         <div>
             <Container text-xs-start shadow-lg >
                 <Row>
                     <Col><Image roundedCircle src={'https://picsum.photos/200/300'} alt="" style={{width: '7rem'}}/></Col>
-                    <Col xs={6} >{title}</Col>
+                    <Col xs={6} >{nickname}</Col>
                 </Row>
                 <Row>
                     <Col>1 of 3</Col>
-                    <Col xs={6}></Col>
+                    <Col xs={6}>{bio}</Col>
                 </Row>
             </Container>    
         </div>
