@@ -6,14 +6,14 @@ export default function CardList({ selectedMentors })
 {
 
 
-    // let title = '',
-    //     cardsData = [];
+    let nickname = [],
+        bio = '';
 
-    // if (selectedMentors) {
-    //     title = selectedMentor[0].mentor
-    //     cardsData = selectedMentor
-    // }
-    console.log(selectedMentors)
+    if (selectedMentors) {
+        nickname = selectedMentor.map(i => i.nickname)
+        bio = selectedMentor.map(i => i.bio)
+    }
+
 
     return (
         <div>
