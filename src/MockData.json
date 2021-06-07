@@ -12,8 +12,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -23,8 +23,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -34,8 +34,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -45,8 +45,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -56,8 +56,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -67,8 +67,8 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 },
 {
@@ -78,17 +78,7 @@
     "bio": "lorem20",
     "experience": "20(hours of teaching)",
     "availability": [{
-        "availability": {"false"},
-        "live": {"true"}
+        "availability": "false",
+        "live": "true"
     }]
 }]
-
-// user_id
-// nickname
-// photo
-// bio
-// experience
-// availability[
-// schedule,
-// live
-// ]
