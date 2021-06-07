@@ -1,0 +1,94 @@
+[{
+    "id": "40",
+    "mentor": "Dimitris",
+    "skills": [
+        "React", "Mongo", "nodeJS"
+    ]
+},
+{
+    "user_Id": "1",
+    "nickname": "Roberto",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "2",
+    "nickname": "Daniel",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "3",
+    "nickname": "Ahmad",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "4",
+    "nickname": "Dimitris",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "5",
+    "nickname": "Henning",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "6",
+    "nickname": "Marc",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+},
+{
+    "user_Id": "7",
+    "nickname": "Jan",
+    "photo": "link",
+    "bio": "lorem20",
+    "experience": "20(hours of teaching)",
+    "availability": [{
+        "availability": {"false"},
+        "live": {"true"}
+    }]
+}]
+
+// user_id
+// nickname
+// photo
+// bio
+// experience
+// availability[
+// schedule,
+// live
+// ]
