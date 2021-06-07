@@ -1,10 +1,26 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import Data from "../../MockData.json"
 
 export default function Cards({ title }) {
     return (
         <div>
-            <Card style={{ width: '18rem' }} className="mx-auto mt-4">
+            <Container text-xs-start shadow-lg >
+                <Row>
+                    <Col><Image roundedCircle src={'https://picsum.photos/200/300'} alt="" style={{width: '7rem'}}/></Col>
+                    <Col xs={6} >{title}</Col>
+                </Row>
+                <Row>
+                    <Col>1 of 3</Col>
+                    <Col xs={6}></Col>
+                </Row>
+            </Container>    
+        </div>
+    )
+}
+
+
+            {/* <Card style={{ width: '18rem' }} className="mx-auto mt-4">
                 <Card.Img variant="top" src={'https://picsum.photos/200/300'} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
@@ -14,9 +30,4 @@ export default function Cards({ title }) {
     </Card.Text>
 
                 </Card.Body>
-            </Card>
-        </div>
-    )
-}
-
-
+            </Card> */}
