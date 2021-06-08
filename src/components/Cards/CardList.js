@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from "./Cards"
 import { useState } from 'react'
 
-export default function CardList({ selectedMentors })
+export default function CardList({ mentors })
 {
 
 
@@ -10,14 +10,14 @@ export default function CardList({ selectedMentors })
 
 
 
-    if (selectedMentors) {
-        allData = selectedMentors
+    if (mentors) {
+        allData = mentors
     }
-
+    console.log(allData)
 
     return (
         <div>
-            {allData.map(i => (<Cards nickname={i.nickname} bio={i.bio} key={i.userId} />))}
+            {allData.map(i => (<Cards nickname={i.name} skills={[i.skills]} key={i._id} />))}
         </div>
     )
 }

@@ -9,7 +9,7 @@ import MainNavBar from './components/MainNavBar'
 import Cards from './components/Cards/Cards'
 import { Card } from 'react-bootstrap'
 
-
+const APIURL = 'https://wbs-final-json-api.herokuapp.com/';
 
 // import FullCalendar from '@fullcalendar/react'
 // import dayGridPlugin from '@fullcalendar/daygrid'
@@ -28,33 +28,50 @@ function App()
 {
 
   const [selectedMentors, setSelectedMentors] = useState('');
-  const [mentors, setMentors] = useState(Data);
+  const [mentors, setMentors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+
+
+  let skill = '';
 
 
   const onSearch = (text) =>
   {
-    const selecting = mentors.filter(i =>
-    {
+    setIsLoading(true)
+    fetch(`${ APIURL }users/skills/${ text }`)
+      .then(res => res.json())
+      .then(json =>
+      {
+        setMentors(json.data);
+        setIsLoading(false);
+
+      })
+      .catch(() => console.log("request failed "))
 
 
-      if (i.skills.filter(e => e === text)) {
-        return i
-      } else {
-        alert('cant find what you are looking for')
-      }
-    })
+    // const selecting = mentors.filter(i =>
+    // {
 
-    // console.log(selecting)
-    setSelectedMentors(selecting)
+
+    //   if (i.skills.filter(e => e === text)) {
+    //     return i
+    //   } else {
+    //     alert('cant find what you are looking for')
+    //   }
+    // })
+
+    // // console.log(selecting)
+    // setSelectedMentors(selecting)
   }
-  // console.log(selectedMentor)
+  console.log(mentors)
 
   return (
     <>
       <div className="App">
         <MainNavBar />
         <SearchBar onSearch={onSearch} />
-        <CardList selectedMentors={selectedMentors} />
+        <CardList mentors={mentors} />
         <Cards />
 
 

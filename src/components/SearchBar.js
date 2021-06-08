@@ -9,29 +9,38 @@ export default function SearchBar({ onSearch })
 {
 
 
-    const [results, setResults] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
+
+
+
+    const search = () =>
+    {
+        onSearch(searchQuery)
+        setSearchQuery('')
+    }
 
     const searchHandler = (e) =>
     {
-        setResults(e.target.value.toLowerCase());
+        setSearchQuery(e.target.value.toLowerCase());
         // console.log(setResults);
     }
 
     const handelEnter = e =>
     {
-        e.preventDefault();
+
         if (e.key === 'Enter') {
-            onSearch(results)
-            setResults('')
+            e.preventDefault();
+            search()
         }
 
     }
     const clickHandler = (j) =>
     {
         j.preventDefault();
-        onSearch(results)
-        setResults('')
+        search()
     }
+
+
     return (
         <div>
 
@@ -46,16 +55,17 @@ export default function SearchBar({ onSearch })
 
                         <form  >
                             <input
-                                value={results}
+                                value={searchQuery}
                                 type="text"
                                 onChange={searchHandler}
+                                onKeyPress={handelEnter}
                                 placeholder="type a skill..."
                                 style={{ height: '2.5rem', width: '15rem' }}
                             />
                             <Button
                                 style={{ height: '2.5rem', marginBottom: '4px' }}
                                 type="submit"
-                                onKeyPress={handelEnter}
+
                                 onClick={clickHandler}
 
                             ><FaSearch style={{ marginBottom: '4' }} /></Button>

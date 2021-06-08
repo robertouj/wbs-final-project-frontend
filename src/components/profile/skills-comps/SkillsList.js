@@ -15,7 +15,7 @@ const SkillsList = ({ skills, setSkills }) =>
         allSkills = skills.map(i => i.skills);
     }
 
-    console.log(allSkills)
+    // console.log(allSkills)
 
 
     return (
