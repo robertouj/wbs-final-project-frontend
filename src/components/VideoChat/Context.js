@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { createContext, useState, useRef, useEffect } from "react";
 import {
   callUser,
@@ -26,11 +25,11 @@ function ContextProvider({ children }) {
 
   //TODO: Here the object to control the visibility or enable/disable buttons
   // // Set up initial action button
-  // const [states, setStates] = useState({
-  //   callButtonEnabled: true,
-  //   hangupButtonEnabled: false,
-  //   answerButtonEnabled: false,
-  // });
+  const [states, setStates] = useState({
+    callButtonEnabled: true,
+    hangupButtonEnabled: false,
+    answerButtonEnabled: false,
+  });
 
   const myVideo = useRef();
   const userVideo = useRef();
@@ -119,7 +118,7 @@ function ContextProvider({ children }) {
     <SocketContext.Provider
       value={{
         //TODO: Control the states
-        // states,
+        states,
         stream,
         myVideo,
         userVideo,
