@@ -7,7 +7,7 @@ import APIData from '../../MockData.json'
 export default function Skills()
 {
 
-    const [skills, setSkills] = useState(APIData);
+    const [skills, setSkills] = useState('');
     const [text, setText] = useState('');
 
     return (

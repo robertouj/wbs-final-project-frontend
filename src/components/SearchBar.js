@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Container, Row, Col, Button } from 'react-bootstrap/';
-import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa'
+import CardList from './Cards/CardList'
 
+const APIURL = 'https://wbs-final-json-api.herokuapp.com/';
 
-export default function SearchBar({ onSearch })
+export default function SearchBar()
 {
 
 
     const [searchQuery, setSearchQuery] = useState('');
 
+
+    const [mentors, setMentors] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+
+    const onSearch = (text) =>
+    {
+        setIsLoading(true)
+        fetch(`${ APIURL }users/skills/${ text }`)
+            .then(res => res.json())
+            .then(json =>
+            {
+                setMentors(json.data);
+                setIsLoading(false);
+
+            })
+            .catch(() => console.log("request failed "))
+    }
 
 
     const search = () =>
@@ -42,10 +61,10 @@ export default function SearchBar({ onSearch })
 
 
     return (
-        <div>
+        <div style={{ width: '100%' }}>
 
-            <Container className={'float-start   '} style={{ marginTop: '5rem' }}>
-                <Row>
+            <Container style={{ marginTop: '5rem' }}>
+                <Row >
                     <h2 style={{ marginLeft: '1rem' }}>what do you want to learn?</h2>
                     <Col
 
@@ -73,7 +92,13 @@ export default function SearchBar({ onSearch })
                     </Col>
 
                 </Row>
+                <Row>
+                    <Col className='mx-auto'>
+                        <CardList mentors={mentors} />
+                    </Col>
+                </Row>
             </Container>
+
         </div>
     )
 }

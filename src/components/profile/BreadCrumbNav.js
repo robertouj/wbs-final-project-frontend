@@ -12,7 +12,10 @@ const BreadCrumbNav = () =>
         <>
             <Container className="my-5 py-5" >
                 <Row >
-                    <Col lg={{ span: 12, offset: 4 }}
+
+                    <Col
+                        style={{ textAlign: 'center' }}
+                        lg={{ span: 12, offset: 4 }}
                         md={{ span: 12, offset: 3 }}
                         sm={{ span: 12, offset: 1 }}
                         xs={{ span: 12, offset: 1 }}>

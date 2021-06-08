@@ -1,26 +1,18 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import '../../../src/Sample.less';
 
-export default function Sample()
+import React, { useState } from "react";
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import { Calendar } from "react-modern-calendar-datepicker";
+
+const Cal = () =>
 {
-    const [value, onChange] = useState(new Date());
-
+    const [selectedDay, setSelectedDay] = useState(null);
     return (
-        <div className="Sample">
-            <header>
-                <h1>react-calendar sample page</h1>
-            </header>
-            <div className="Sample__container">
-                <main className="Sample__container__content">
-                    <Calendar
-                        onChange={onChange}
-                        showWeekNumbers
-                        value={value}
-                        onClickDay={alert('heelo')}
-                    />
-                </main>
-            </div>
-        </div>
+        <Calendar
+            value={selectedDay}
+            onChange={setSelectedDay}
+            shouldHighlightWeekends
+        />
     );
-}
+};
+
+export default Cal;

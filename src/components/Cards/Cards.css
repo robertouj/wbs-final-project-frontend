@@ -8,13 +8,17 @@
   color: black;
   font-size: 1.8rem;
   font-weight: 600;
-  position: absolute;
-  left: 20rem;
 }
 
-.bio--section {
+/* .bio--section {
   background-color: white;
   font-size: 1.2rem;
   display: flex;
   text-align: start;
+} */
+.card--skills{
+  color: #9482FF !important;
+}
+.card--container{
+  background-color: #ffffff;
 }

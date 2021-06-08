@@ -18,7 +18,7 @@ export default function CardList({ mentors })
     console.log(allData)
 
     return (
-        <div>
+        <div >
             {allData.map(i => (
                 <Cards
                     nickname={i.name}

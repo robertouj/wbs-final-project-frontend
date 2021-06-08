@@ -12,38 +12,17 @@ function App()
 {
 
 
-  const [mentors, setMentors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
 
-  const onSearch = (text) =>
-  {
-    setIsLoading(true)
-    fetch(`${ APIURL }users/skills/${ text }`)
-      .then(res => res.json())
-      .then(json =>
-      {
-        setMentors(json.data);
-        setIsLoading(false);
-
-      })
-      .catch(() => console.log("request failed "))
 
 
-  }
-  console.log(mentors)
+
 
   return (
     <>
-      <div className="App">
-        <MainNavBar />
-        <SearchBar onSearch={onSearch} />
-        <CardList mentors={mentors} />
 
+      <MainNavBar />
 
-
-
-      </div>
 
     </>
 
