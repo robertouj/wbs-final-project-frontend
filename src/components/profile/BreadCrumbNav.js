@@ -47,10 +47,7 @@ const BreadCrumbNav = () =>
                 <Route path="/profile/Wallet">
                     <Wallet />
 
-                </Route>
-                <Route path='/sessions/:room_id'>
-
-                </Route>
+                </Route>                
             </Switch>
         </>);
 }

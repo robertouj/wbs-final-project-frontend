@@ -4,7 +4,6 @@ import { Link, Route, Switch } from 'react-router-dom';
 import Profile from './profile/Profile'
 import Register from './Register'
 import Login from './Login'
-
 import About from './About'
 
 export default function MainNavBar() {
@@ -37,7 +36,7 @@ export default function MainNavBar() {
                </Route>
              <Route path="/register">
                 <Register />
-                </Route>
+                </Route>          
          </Switch>
 
         </div>
