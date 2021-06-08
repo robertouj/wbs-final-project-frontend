@@ -1,18 +1,19 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Data from "../../MockData.json"
+import './Cards.css'
 
 export default function Cards({ nickname, bio }) {
     return (
         <div>
-            <Container text-xs-start shadow-lg >
+            <Container text-xs-start className="mentor--container">
                 <Row>
                     <Col><Image roundedCircle src={'https://picsum.photos/200/300'} alt="" style={{width: '7rem'}}/></Col>
-                    <Col xs={6} >{nickname}</Col>
+                    <Col xs={6} className="mentor--name" >{nickname}</Col>
                 </Row>
                 <Row>
                     <Col>1 of 3</Col>
-                    <Col xs={6}>{bio}</Col>
+                    <Col xs={6} className="bio--section">{bio}</Col>
                 </Row>
             </Container>    
         </div>

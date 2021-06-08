@@ -55,7 +55,6 @@ function App()
         <MainNavBar />
         <SearchBar onSearch={onSearch} />
         <CardList selectedMentors={selectedMentors} />
-        <Cards />
 
 
 

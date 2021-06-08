@@ -1,0 +1,20 @@
+.mentor--container {
+  border: 0.1rem solid black;
+  margin: 2rem;
+  background-color: rgb(241, 231, 199);
+}
+
+.mentor--name {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: absolute;
+  left: 20rem;
+}
+
+.bio--section {
+  background-color: white;
+  font-size: 1.2rem;
+  display: flex;
+  text-align: start;
+}

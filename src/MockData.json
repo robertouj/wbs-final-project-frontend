@@ -4,7 +4,7 @@
     "nickname": "Roberto",
     "skills": ["react", "javascript"],
     "photo": "link",
-    "bio": "lorem20",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed soluta dolores alias ad itaque quo repellat nostrum, eos suscipit, voluptatem mollitia! Magnam magni ullam enim.",
     "experience": "20(hours of teaching)",
     "availability": [{
         "availability": "false",
@@ -16,7 +16,7 @@
     "nickname": "Daniel",
     "skills": ["react", "javascript"],
     "photo": "link",
-    "bio": "lorem20",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed soluta dolores alias ad itaque quo repellat nostrum, eos suscipit, voluptatem mollitia! Magnam magni ullam enim.",
     "experience": "20(hours of teaching)",
     "availability": [{
         "availability": "false",
