@@ -21,11 +21,11 @@ export default function Cards({ nickname, bio }) {
                                 <Col className="columns" sm>
                                     <Card style={{ width: '50rem' }} className="ms-auto">
                                         <Card.Body>
-                                            <Card.Title className="mb-5 ms-3">Mentor 1</Card.Title>
+                                            <Card.Title className="mb-5 ms-3">{nickname}</Card.Title>
                                             <Container>
                                                 <Row>
                                                     <Col >
-                                                        <Image src="achmed.jpg" width="100rem" roundedCircle />
+                                                        <Image src={'https://picsum.photos/200/300'} width="100rem" roundedCircle />
                                                         <span>placeholder</span> <br></br>
                                                         <span>placeholder</span>
 
@@ -33,7 +33,7 @@ export default function Cards({ nickname, bio }) {
                                                     <Col sm={9}>
                                                         <Card.Subtitle className="mb-2 text-muted">skills field</Card.Subtitle>
                                                         <Card.Text>
-                                                            description description description description description description description description description description description description description description description
+                                                            {bio}
                 </Card.Text>
                                                         <Card.Link href="#">Card Link</Card.Link>
                                                         <Card.Link href="#">Another Link</Card.Link>
