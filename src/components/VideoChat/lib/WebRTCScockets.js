@@ -5,9 +5,10 @@
 //const SERVER = "http://localhost:5000";
 const SERVER = "https://wbs-fp-videochat-test.herokuapp.com/";
 //const SERVER = "https://wbs-final-json-api.herokuapp.com/";
-const io = require("socket.io-client");
+let io;
+let socket;
 const Peer = require("simple-peer");
-const socket = io(SERVER);
+
 
 /****************************************************************************
  * Signaling server
@@ -106,6 +107,8 @@ function answerCall(
 }
 
 function getMe(setMe, setCall, setRemoteName) {
+  io = require("socket.io-client");
+  socket = io(SERVER);
   socket.on("me", (id) => setMe(id));
 
   socket.on("callUser", ({ from, name: callerName, signal }) => {
