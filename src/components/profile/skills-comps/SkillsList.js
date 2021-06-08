@@ -1,14 +1,22 @@
-import { Container, Row, Col, Form } from 'react-bootstrap';
+
+import { Container, Row } from 'react-bootstrap';
+import Skill from './Skill';
+
 
 const SkillsList = ({ skills, setSkills }) =>
 {
 
+
+
+
     let allSkills = [];
 
     if (skills) {
-        allSkills = skills;
+        allSkills = skills.map(i => i.skills);
     }
+
     console.log(allSkills)
+
 
     return (
         <>
@@ -18,26 +26,15 @@ const SkillsList = ({ skills, setSkills }) =>
                     <Row>
                         <h2 className="my-3" style={{ textAlign: "center" }}>
                             My Skills
-    </h2>
+                        </h2>
 
 
                         {allSkills.map(i =>
-                        (<Col xl={{ span: 2 }} className={"my-3 "}>
-                            <div className="mb-4" style={{ backgroundColor: 'white', border: "thin solid", boxShadow: '2px 2px 46px -16px #000000', }}>
-                                <p style={{ textAlign: 'center', marginBottom: 0 }}> {i.text} </p>
-
-                                <Row> <div style={{ textAlign: 'center' }}>   <Form>
-                                    <Form.Group controlId="formBasicRange" >
-
-                                        <Form.Control type="range" />
-                                    </Form.Group>
-                                </Form>
-
-                                </div>
-                                </Row>
-                            </div>
-
-                        </Col>))}
+                        (
+                            <>
+                                <Skill text={i.text} Key={i.id} setSkills={setSkills} skills={skills} />
+                            </>
+                        ))}
 
 
                     </Row>
@@ -48,3 +45,11 @@ const SkillsList = ({ skills, setSkills }) =>
 }
 
 export default SkillsList;
+
+
+
+
+/*
+60be54163e9bbcd950a171c2
+60be60453e9bbcd950a171c7
+*/

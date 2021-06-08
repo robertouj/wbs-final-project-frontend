@@ -7,11 +7,11 @@ export default function CardList({ selectedMentors })
 
 
     let allData = [];
-           
+
 
 
     if (selectedMentors) {
-            allData = selectedMentors
+        allData = selectedMentors
     }
 
 
@@ -27,9 +27,4 @@ export default function CardList({ selectedMentors })
             key={i.userId} />))}
         </div>
     )
-}        
-// nickname = selectedMentor.map(i => i.nickname)
-//         bio = selectedMentor.map(i => i.bio)
-
-//         userId = selectedMentors.map(i => i.userId)
-// {cardsData.map(i => (<Cards title={title}  key={i.id} />))}
+}

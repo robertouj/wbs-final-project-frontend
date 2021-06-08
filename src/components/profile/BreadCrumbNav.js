@@ -30,25 +30,28 @@ const BreadCrumbNav = () =>
                 </Row>
             </Container>
             <Switch>
-            <Route path="/profile/Personal">
-                <Personal />
-            </Route>
-            <Route path="/profile/Bio">
-            <Bio />
-            </Route>
-            <Route path="/profile/Skills">
-            <Skills />
+                <Route path="/profile/Personal">
+                    <Personal />
+                </Route>
+                <Route path="/profile/Bio">
+                    <Bio />
+                </Route>
+                <Route path="/profile/Skills">
+                    <Skills />
 
-            </Route>
-            <Route path="/profile/Schedule">
-            <Schedule />
+                </Route>
+                <Route path="/profile/Schedule">
+                    <Schedule />
 
-            </Route>
-            <Route path="/profile/Wallet">
-            <Wallet />
+                </Route>
+                <Route path="/profile/Wallet">
+                    <Wallet />
 
-            </Route>
-        </Switch>
+                </Route>
+                <Route path='/sessions/:room_id'>
+
+                </Route>
+            </Switch>
         </>);
 }
 
