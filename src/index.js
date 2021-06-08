@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { ContextProvider } from "./components/VideoChat/Context";
 import VideoChat from "./components/VideoChat/VideoChat";
@@ -14,7 +14,7 @@ import Notifications from "./components/VideoChat/Notifications";
 ReactDOM.render(
   <React.StrictMode>
     
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
           <Route path="/sessions/:room_id">
           <ContextProvider>
@@ -31,7 +31,7 @@ ReactDOM.render(
             <App />
           </Route>
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     
   </React.StrictMode>,
   document.getElementById("root")

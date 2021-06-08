@@ -3,8 +3,8 @@
  ****************************************************************************/
 
 //const SERVER = "http://localhost:5000";
-//const SERVER = "https://wbs-fp-videochat-test.herokuapp.com/";
-const SERVER = "https://wbs-final-json-api.herokuapp.com/";
+const SERVER = "https://wbs-fp-videochat-test.herokuapp.com/";
+//const SERVER = "https://wbs-final-json-api.herokuapp.com/";
 const io = require("socket.io-client");
 const Peer = require("simple-peer");
 const socket = io(SERVER);
