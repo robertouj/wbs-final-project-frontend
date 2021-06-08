@@ -3,6 +3,7 @@ import  Button  from "react-bootstrap/Button";
 import  Tabs from "react-bootstrap/Tabs";
 import  Tab from "react-bootstrap/Tab";
 import SlidingPane from "react-sliding-pane";
+
 import Chat from "./Chat";
 // import "react-sliding-pane/dist/react-sliding-pane.css";
 import "./sliding-pane.css";
@@ -13,7 +14,7 @@ import "./sliding-pane.css";
 import { SocketContext } from "./Context";
 
 function Sidebar({ children }) {
-  const { states, startSession, setName, leaveCall, isSessionAvailable } =
+  const { states, leaveCall } =
     useContext(SocketContext);
   const [paneOpen, setPaneOpen] = useState(false);
 
@@ -27,14 +28,7 @@ function Sidebar({ children }) {
             onClick={leaveCall}
           >
               <i className="bi bi-door-closed-fill"></i> Close room
-          </Button>
-          <Button
-            disabled={!isSessionAvailable}
-            variant="primary"
-            onClick={startSession}
-          >
-            <i className="bi bi-door-open-fill"></i> Enter room
-          </Button>
+          </Button>         
 
           <Button onClick={() => setPaneOpen(true)}>
             <i className="bi bi-chat-left-text"></i> Chat Panel
@@ -66,15 +60,6 @@ function Sidebar({ children }) {
             
            
           </SlidingPane>
-        </div>
-        <div className="sidebar__name">
-          <label>
-            Your Name:
-            <input
-              placeholder="Enter your name..."
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
         </div>
         {children}
       </div>

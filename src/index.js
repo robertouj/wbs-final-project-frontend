@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { ContextProvider } from './components/VideoChat/Context';
+import { ContextProvider } from "./components/VideoChat/Context";
 import VideoChat from "./components/VideoChat/VideoChat";
 import Sidebar from "./components/VideoChat/Sidebar";
 import Notifications from "./components/VideoChat/Notifications";

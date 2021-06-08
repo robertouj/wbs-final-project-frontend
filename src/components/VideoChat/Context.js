@@ -38,6 +38,7 @@ function ContextProvider({ children }) {
   useEffect(() => {
     checkSessionAvailability();
     getMe(setMe, setCall, setRemoteName);
+    startSession();
   }, []);
 
   useEffect(() => {
@@ -61,8 +62,10 @@ function ContextProvider({ children }) {
     }
   }, [stream, initCall]);
 
-  const initRoom = (roomId) => {
-    window.location.hash = roomId;
+  const initRoom = () => {
+    // href.substring(this.href.lastIndexOf('/') + 1)
+    const roomId = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+    console.log(roomId);
     setRoom(roomId);
   };
 
