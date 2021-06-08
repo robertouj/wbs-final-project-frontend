@@ -1,9 +1,16 @@
 import { InputGroup, Button, FormControl, Container, Row, Col } from "react-bootstrap";
 
+import React from 'react'
 
 
-const AddSkill = ({ text, setText, skills, setSkills }) =>
+
+
+
+
+export default function AddSkill({ text, setText, skills, setSkills })
 {
+
+
 
     const listenHandler = (i) =>
     {
@@ -70,4 +77,3 @@ const AddSkill = ({ text, setText, skills, setSkills }) =>
     );
 }
 
-export default AddSkill;

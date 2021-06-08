@@ -2,11 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import AddSkill from './skills-comps/AddSkill'
 import SkillsList from './skills-comps/SkillsList'
+import APIData from '../../MockData.json'
 
 export default function Skills()
 {
 
-    const [skills, setSkills] = useState([]);
+    const [skills, setSkills] = useState(APIData);
     const [text, setText] = useState('');
 
     return (

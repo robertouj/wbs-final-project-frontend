@@ -1,5 +1,5 @@
 
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Skill from './Skill';
 
 
@@ -12,8 +12,11 @@ const SkillsList = ({ skills, setSkills }) =>
     let allSkills = [];
 
     if (skills) {
-        allSkills = skills;
+        allSkills = skills.map(i => i.skills);
     }
+
+    console.log(allSkills)
+
 
     return (
         <>
@@ -42,3 +45,11 @@ const SkillsList = ({ skills, setSkills }) =>
 }
 
 export default SkillsList;
+
+
+
+
+/*
+60be54163e9bbcd950a171c2
+60be60453e9bbcd950a171c7
+*/
