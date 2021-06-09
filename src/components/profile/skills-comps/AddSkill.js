@@ -7,7 +7,7 @@ import React from 'react'
 
 
 
-export default function AddSkill({ text, setText, skills, setSkills })
+export default function AddSkill({ text, setText, newSkills, setNewSkills })
 {
 
 
@@ -22,10 +22,11 @@ export default function AddSkill({ text, setText, skills, setSkills })
 
     const enterHandler = (e) =>
     {
-        e.preventDefault();
-        if (e.key === 'Enter') {
-            setSkills([
-                ...skills,
+
+        if (e.key === 'Enter' && e.target.value) {
+            e.preventDefault();
+            setNewSkills([
+                ...newSkills,
                 {
                     text,
                     id: Math.random() * 1000
@@ -42,8 +43,8 @@ export default function AddSkill({ text, setText, skills, setSkills })
     {
         j.preventDefault();
 
-        setSkills([
-            ...skills,
+        setNewSkills([
+            ...newSkills,
             {
                 text,
                 id: Math.random() * 1000
@@ -69,6 +70,7 @@ export default function AddSkill({ text, setText, skills, setSkills })
                                 id="skill"
                                 name="skill"
                                 onChange={listenHandler}
+                                onKeyPress={enterHandler}
                                 type="text"
                                 value={text}
                                 placeholder="type a skill..."
@@ -86,7 +88,7 @@ export default function AddSkill({ text, setText, skills, setSkills })
                         xs={{ offset: 1 }}
 
                     >
-                        <Button className="bttn" onClick={clickHandler} onKeyPress={enterHandler} style={{ height: '2.6rem', backgroundColor: '#ac66cc' }} type="submit">ADD TO</Button></Col>
+                        <Button className="bttn" onClick={clickHandler} style={{ height: '2.6rem', backgroundColor: '#ac66cc' }} type="submit">ADD TO</Button></Col>
                 </Row>
 
             </Container>

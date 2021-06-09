@@ -8,10 +8,12 @@ const meId = '60be54163e9bbcd950a171c2';
 
 const Profile = () =>
 {
-    const [me, setMe] = useState({});
-
+    let [me, setMe] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
+    let [added, setAdded] = useState({})
     useEffect(() =>
     {
+        setIsLoading(true)
         fetch(APIURL)
             .then(res => res.json())
             .then(json =>
@@ -19,11 +21,10 @@ const Profile = () =>
                 const mentors = json.data;
                 const me = mentors.find(({ _id }) => _id === meId)
                 setMe(me)
-
+                setIsLoading(false);
             })
             .catch(() => console.log("request failed "))
     }, [])
-
 
 
     return (

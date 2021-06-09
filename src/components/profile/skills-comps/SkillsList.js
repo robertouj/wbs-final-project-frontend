@@ -1,83 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import Skill from './Skill';
-import axios from 'axios';
 
 
-const APIURL = 'https://wbs-final-json-api.herokuapp.com/';
 
-const SkillsList = ({ skills, setSkills }) =>
+
+
+const SkillsList = ({ skills, newSkills }) =>
 {
-
-    const [fetchSkills, setFetchSkills] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() =>
-    {
-        if (isLoading) {
-            axios
-                .get(`${ APIURL }skills`)
-                .then((response) =>
-                {
-
-                    setFetchSkills(response.data)
-                    setIsLoading(false)
-                })
-                .catch((error) =>
-                {
-                    console.log(error)
-                });
-        }
-    }, [skills, fetchSkills])
-
-    console.log(fetchSkills.data)
-
-    const [users, setUsers] = useState([]);
-
-    useEffect(() =>
-    {
-        axios
-            .get(`https://wbs-final-json-api.herokuapp.com/users`)
-            .then((response) =>
-            {
-                setUsers(response.data);
-            })
-            .catch((error) =>
-            {
-                console.log(error)
-            })
-    }, []);
-    console.log(users)
-    // 
-    let allSkills = [];
+    // console.log(skills)
+    let skillsData = [];
 
     if (skills) {
-        allSkills = skills.map(i => i.skills);
+        skillsData = skills;
+
+    } let newskillsData = [];
+
+    if (newSkills) {
+        newskillsData = newSkills;
+
     }
-
-    // console.log(allSkills)
-
-
+    // console.log(skillsData)
+    console.log(newSkills)
     return (
         <>
 
             <div style={{ backgroundColor: "lightsteelblue", padding: '1rem 0', margin: '0 20rem' }}>
                 <Container>
                     <Row>
-                        <h2 className="my-3" style={{ textAlign: "center" }}>
-                            My Skills
+                        <Col>
+                            <h2 className="my-3" style={{ textAlign: "center" }}>
+                                My Skills
                         </h2>
+                        </Col>
+
+                    </Row>
+                    <Row>
 
 
-                        {allSkills.map(i =>
+                        {skillsData.map(i =>
                         (
                             <>
-                                <Skill text={i.text} Key={i.id} setSkills={setSkills} skills={skills} />
+                                <Col ><Skill skills={i.name} key={i._id} /> </Col>
                             </>
                         ))}
 
+                        {newskillsData.map(i =>
+                        (
+                            <>
+                                <Col ><Skill skills={i.text} key={i._id} /> </Col>
+                            </>
+                        ))}
 
                     </Row>
+
+
+
+
+
                 </Container>
             </div>
         </>
