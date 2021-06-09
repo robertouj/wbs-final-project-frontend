@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import './Cards.css'
-
+import { BsCalendar } from 'react-icons/bs';
+import { CgMediaLive } from 'react-icons/cg';
 export default function Cards({ nickname, bio, skill1, skill2, photo })
 {
 
@@ -12,11 +13,11 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
 
             <Row >
 
-                <Col className="my-5" >
+                <Col className="my-5 " >
                     <Card  >
-                        <Card.Body>
+                        <Card.Body className="card--container">
                             <Card.Title className="mb-5 ms-3 mentor--name">{nickname}</Card.Title>
-                            <Container>
+                            <Container className="">
                                 <Row>
                                     <Col >
                                         <Image src={'https://picsum.photos/200/300'} width="100rem" roundedCircle />
@@ -30,8 +31,8 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
                                         <Card.Text>
                                             {bio}
                                         </Card.Text>
-                                        <Card.Link href="#">Card Link</Card.Link>
-                                        <Card.Link href="#">Another Link</Card.Link>
+                                        <Card.Link className="mentor--icon" href="#"><BsCalendar /></Card.Link>
+                                        <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
                                     </Col>
                                 </Row>
                             </Container>
