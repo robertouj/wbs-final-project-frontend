@@ -13,10 +13,9 @@ import Notifications from "./components/VideoChat/Notifications";
 
 ReactDOM.render(
   <React.StrictMode>
-    
-      <HashRouter>
-        <Switch>
-          <Route path="/sessions/:room_id">
+    <HashRouter>
+      <Switch>
+        <Route path="/sessions/:room_id">
           <ContextProvider>
             <Container fluid>
               <VideoChat />
@@ -25,14 +24,13 @@ ReactDOM.render(
                 <Notifications />
               </Sidebar>
             </Container>
-            </ContextProvider>
-          </Route>
-          <Route path="/">
-            <App />
-          </Route>
-        </Switch>
-      </HashRouter>
-    
+          </ContextProvider>
+        </Route>
+        <Route path="/">
+          <App />
+        </Route>
+      </Switch>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
