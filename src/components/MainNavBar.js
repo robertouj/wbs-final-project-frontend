@@ -7,22 +7,23 @@ import Login from './Login'
 import SearchBar from './SearchBar'
 
 import About from './About'
-import Modal from './Modal'
+
 
 export default function MainNavBar()
 {
+
   return (
-    <div>
-      <Navbar bg="light" expand="sm">
+    <div >
+      <Navbar style={{ backgroundColor: "#ac66cc" }} expand="sm" >
         <Navbar.Brand className="ms-5" href="/">Coink!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto me-4 justify-content-between">
-            <Nav.Link><Link to="/" >Home</Link></Nav.Link>
-            <Nav.Link><Link to="/About" >about</Link></Nav.Link>
-            <Nav.Link><Link to="/profile" >profile</Link></Nav.Link>
-            <Nav.Link><Link to="/login" >login</Link></Nav.Link>
-            <Nav.Link><Link to="/register" >register</Link></Nav.Link>
+          <Nav className="ms-auto me-4 justify-content-between" >
+            <Nav.Link ><Link style={{ textDecoration: 'none' }} to="/" >Home</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/About" >about</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/profile" >profile</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/login" >login</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/register" >register</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -30,7 +31,9 @@ export default function MainNavBar()
 
 
       <Switch>
-        <Route path='/' exact component={SearchBar} />
+        <Route path='/' exact  >
+          <SearchBar />
+        </Route>
         <Route path='/About'>
           <About />
         </Route>
@@ -45,6 +48,6 @@ export default function MainNavBar()
         </Route>
       </Switch>
 
-    </div>
+    </div >
   )
 }

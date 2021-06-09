@@ -7,7 +7,7 @@ import Schedule from "./Schedule"
 import Wallet from "./Wallet"
 import "./BreadCrumNav.css"
 
-const BreadCrumbNav = () =>
+const BreadCrumbNav = ({ me }) =>
 {
     return (
         <>
@@ -38,10 +38,10 @@ const BreadCrumbNav = () =>
                     <Personal />
                 </Route>
                 <Route path="/profile/Bio">
-                    <Bio />
+                    <Bio text={me.bio} />
                 </Route>
                 <Route path="/profile/Skills">
-                    <Skills />
+                    <Skills skills={me.skills} />
 
                 </Route>
                 <Route path="/profile/Schedule">

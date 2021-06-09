@@ -1,8 +1,12 @@
 import React from 'react'
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import './Cards.css'
-import { BsCalendar } from 'react-icons/bs';
 import { CgMediaLive } from 'react-icons/cg';
+import Modals from "../Modals/Modal";
+
+
+
+
 export default function Cards({ nickname, bio, skill1, skill2, photo })
 {
 
@@ -31,8 +35,15 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
                                         <Card.Text>
                                             {bio}
                                         </Card.Text>
-                                        <Card.Link className="mentor--icon" href="#"><BsCalendar /></Card.Link>
-                                        <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
+                                        <Row>
+                                            <Col lg={1}>
+                                                <Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link>
+
+                                            </Col>
+                                            <Col>
+                                                <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
+                                            </Col>
+                                        </Row>
                                     </Col>
                                 </Row>
                             </Container>

@@ -1,5 +1,7 @@
-import { Modal, Button } from 'react-bootstrap'
-import React from 'react'
+import { Modal, Button, Container, Row, Col } from 'react-bootstrap'
+import React, { Fragment } from 'react'
+import { BsCalendar } from 'react-icons/bs';
+import Cal from '../profile/SimpleCalendar';
 
 function MyVerticallyCenteredModal(props)
 {
@@ -16,12 +18,19 @@ function MyVerticallyCenteredModal(props)
         </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>Centered Modal</h4>
-                <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
-        </p>
+                <Container>
+                    <Row >
+                        <Col lg={{ offset: 4 }}>
+                            <h4 className="ms-3">Centered Modal</h4>
+                        </Col>
+                    </Row>
+                    <Row >
+                        <Col lg={{ offset: 3 }}>
+                            <Cal />
+                        </Col>
+                    </Row>
+
+                </Container>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>
@@ -36,16 +45,16 @@ export default function Modals()
 
     const [modalShow, setModalShow] = React.useState(false);
     return (
-        <>
+        <div>
             <Button variant="primary" onClick={() => setModalShow(true)}>
-                press
-      </Button>
+                <BsCalendar />
+            </Button>
 
             <MyVerticallyCenteredModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
-        </>
+        </div>
 
     )
 }

@@ -15,7 +15,7 @@ export default function CardList({ mentors })
     if (mentors) {
         allData = mentors
     }
-    console.log(allData)
+
 
     return (
         <div >

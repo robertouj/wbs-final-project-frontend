@@ -79,10 +79,10 @@ export default function SearchBar()
                                 onChange={searchHandler}
                                 onKeyPress={handelEnter}
                                 placeholder="type a skill..."
-                                style={{ height: '2.5rem', width: '15rem' }}
+                                style={{ height: '2.6rem', width: '15rem', marginTop: '2px' }}
                             />
                             <Button
-                                style={{ height: '2.5rem', marginBottom: '4px' }}
+                                style={{ height: '2.6rem', marginBottom: '5px', backgroundColor: '#ac66cc', borderRadius: 'none' }}
                                 type="submit"
 
                                 onClick={clickHandler}
