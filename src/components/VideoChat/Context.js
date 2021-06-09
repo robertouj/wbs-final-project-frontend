@@ -38,7 +38,9 @@ function ContextProvider({ children }) {
   useEffect(() => {
     checkSessionAvailability();
     getMe(setMe, setCall, setRemoteName);
-    startSession();
+    setTimeout(() => {
+      startSession()
+    }, 3000);
   }, []);
 
   useEffect(() => {
