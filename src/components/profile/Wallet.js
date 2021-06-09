@@ -1,5 +1,4 @@
 import React from 'react'
-import Cal from './SimpleCalendar';
 
 export default function Wallet()
 {
