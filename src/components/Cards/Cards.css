@@ -16,9 +16,23 @@
   display: flex;
   text-align: start;
 } */
-.card--skills{
-  color: #9482FF !important;
+.card--skills {
+  color: #9482ff !important;
 }
-.card--container{
-  background-color: #ffffff;
+.card--container {
+  /* background-color: #faf7fb; */
+  box-shadow: 3px 3px 8px rgb(0, 0, 0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a {
+  list-style: none;
+  color: black;
+}
+.mentor--icon {
+  color: black;
+  font-size: 1.6rem;
+}
+.mentor--icon:hover {
+  color: green;
 }
