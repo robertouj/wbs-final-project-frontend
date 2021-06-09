@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { ContextProvider } from "./components/VideoChat/Context";
 import VideoChat from "./components/VideoChat/VideoChat";
