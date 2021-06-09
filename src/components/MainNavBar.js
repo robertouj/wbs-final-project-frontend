@@ -7,6 +7,7 @@ import Login from './Login'
 import SearchBar from './SearchBar'
 
 import About from './About'
+import Modal from './Modal'
 
 export default function MainNavBar()
 {
@@ -26,7 +27,8 @@ export default function MainNavBar()
         </Navbar.Collapse>
       </Navbar>
 
-      {/* About, Profile/Bio Profile/Personal Profile/Schedule Profile/Skills Profile/Wallet */}
+
+
       <Switch>
         <Route path='/' exact component={SearchBar} />
         <Route path='/About'>
