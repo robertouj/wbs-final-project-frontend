@@ -17,7 +17,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/sessions">
           <HashRouter>
-            <Route path="/:room_id">
+            <Route path="/room/:room_id">
               <ContextProvider>
                 <Container fluid>
                   <VideoChat />

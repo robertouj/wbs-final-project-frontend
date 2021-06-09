@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 
 const BreadCrumbNav = () => {
   const NewTab = () => {
-    window.open(`/sessions#/c9f2a12622782`, "_blank");
+    window.open(`/sessions/#/room/c9f2a12622782`, "_blank");
   };
 
 
