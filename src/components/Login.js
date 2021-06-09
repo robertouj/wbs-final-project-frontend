@@ -7,7 +7,7 @@ export default function Login() {
     return (
         <div>
             <AuthForm />
-             <Container className="m-auto p-3">
+             {/* <Container className="m-auto p-3">
                 <Row>
                     <Col lg={4} md={6} sm={12} className="text-center m-auto p-3">
                         <img className="icon-img" src={ArrowRight} alt="icon" />
@@ -29,7 +29,7 @@ export default function Login() {
                         </Form>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
         </div>
     )
 }
