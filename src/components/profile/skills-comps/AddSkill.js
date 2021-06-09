@@ -54,10 +54,17 @@ export default function AddSkill({ text, setText, skills, setSkills })
     // console.log(skills)
     return (
         <>
-            <Container>
+            <Container className="mb-5">
                 <Row>
-                    <Col xl={{ span: 3, offset: 5 }}>
-                        <form className="todo-form" >
+                    <Col
+                        xl={{ span: 1, offset: 4 }}
+                        lg={{ span: 1, offset: 4 }}
+                        md={{ span: 2, offset: 3 }}
+                        sm={{ span: 1, offset: 2 }}
+                        xs={{ offset: 2 }}
+
+                    >
+                        <form >
                             <input
                                 id="skill"
                                 name="skill"
@@ -65,11 +72,21 @@ export default function AddSkill({ text, setText, skills, setSkills })
                                 type="text"
                                 value={text}
                                 placeholder="type a skill..."
+                                style={{ height: '2.6rem', width: '220px' }}
 
                             />
-                            <Button className="bttn" onClick={clickHandler} onKeyPress={enterHandler} type="submit">ADD TO</Button>
+
                         </form>
                     </Col>
+                    <Col
+                        xl={{ offset: 1 }}
+                        lg={{ offset: 1 }}
+                        md={{ offset: 1 }}
+                        sm={{ offset: 3 }}
+                        xs={{ offset: 1 }}
+
+                    >
+                        <Button className="bttn" onClick={clickHandler} onKeyPress={enterHandler} style={{ height: '2.6rem', backgroundColor: '#ac66cc' }} type="submit">ADD TO</Button></Col>
                 </Row>
 
             </Container>

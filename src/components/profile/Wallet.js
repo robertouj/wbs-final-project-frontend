@@ -1,12 +1,12 @@
 import React from 'react'
-import SimpleCalendar from './SimpleCalendar';
+import Cal from './SimpleCalendar';
 
 export default function Wallet()
 {
     return (
         <div>
             Wallet
-            <SimpleCalendar />
+         
         </div>
     )
 }

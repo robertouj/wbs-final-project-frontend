@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,35 +10,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
-/* .demo-app {
-  display: flex;
-  min-height: 100%;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-.demo-app-sidebar {
-  width: 300px;
-  line-height: 1.5;
-  background: #eaf9ff;
-  border-right: 1px solid #d3e2e8;
-}
-
-.demo-app-sidebar-section {
-  padding: 2em;
-}
-
-.demo-app-main {
-  flex-grow: 1;
-  padding: 3em;
-} */
-     
-/* .fc { the calendar root
-  max-width: 1100px;
-  margin: 0 auto;
-} */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap");
 
@@ -60,4 +30,3 @@ h5,
 h6 {
   font-family: "Lato", sans-serif;
 }
-

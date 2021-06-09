@@ -1,26 +1,66 @@
 import React from 'react'
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import Data from "../../MockData.json"
+import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import './Cards.css'
+import { CgMediaLive } from 'react-icons/cg';
+import Modals from "../Modals/Modal";
 
-export default function Cards({ nickname, bio }) {
+
+
+
+export default function Cards({ nickname, bio, skill1, skill2, photo })
+{
+
     return (
-        <div>
-            <Container text-xs-start shadow-lg >
-                <Row>
-                    <Col><Image roundedCircle src={'https://picsum.photos/200/300'} alt="" style={{width: '7rem'}}/></Col>
-                    <Col xs={6} >{nickname}</Col>
-                </Row>
-                <Row>
-                    <Col>1 of 3</Col>
-                    <Col xs={6}>{bio}</Col>
-                </Row>
-            </Container>    
-        </div>
+
+
+        < Container >
+
+            <Row >
+
+                <Col className="my-5 " >
+                    <Card  >
+                        <Card.Body className="card--container">
+                            <Card.Title className="mb-5 ms-3 mentor--name">{nickname}</Card.Title>
+                            <Container className="">
+                                <Row>
+                                    <Col >
+                                        <Image src={'https://picsum.photos/200/300'} width="100rem" roundedCircle />
+                                        <br></br>
+                                        <span>placeholder</span>
+                                        <span>placeholder</span>
+
+                                    </Col>
+                                    <Col sm={9}>
+                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   #${ skill2 }   `}</Card.Subtitle>
+                                        <Card.Text>
+                                            {bio}
+                                        </Card.Text>
+                                        <Row>
+                                            <Col lg={1}>
+                                                <Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link>
+
+                                            </Col>
+                                            <Col>
+                                                <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Container>
+
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+
+
+        </Container >
+
     )
 }
 
 
-            {/* <Card style={{ width: '18rem' }} className="mx-auto mt-4">
+{/* <Card style={{ width: '18rem' }} className="mx-auto mt-4">
                 <Card.Img variant="top" src={'https://picsum.photos/200/300'} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>

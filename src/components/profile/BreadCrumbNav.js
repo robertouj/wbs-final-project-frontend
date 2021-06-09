@@ -1,19 +1,18 @@
-import { Link, Switch, Route } from "react-router-dom";
-import { Breadcrumb, Container, Row, Col } from "react-bootstrap";
-import Personal from "./Personal";
-import Bio from "./Bio";
-import Skills from "./Skills";
-import Schedule from "./Schedule";
-import Wallet from "./Wallet";
-import Button from "react-bootstrap/Button";
+import { Link, Switch, Route } from 'react-router-dom'
+import { Breadcrumb, Container, Row, Col } from 'react-bootstrap';
+import Personal from "./Personal"
+import Bio from "./Bio"
+import Skills from "./Skills"
+import Schedule from "./Schedule"
+import Wallet from "./Wallet"
+import "./BreadCrumNav.css"
 
-const BreadCrumbNav = () => {
+const BreadCrumbNav = ({ me }) =>
+{
   const NewTab = () => {
     window.open(`/#/sessions/c9f2a12622782`, "_blank");
   };
-
-
-  return (
+    return (
     <>
       <Container className="my-5 py-5">
         <Row>
@@ -40,34 +39,39 @@ const BreadCrumbNav = () => {
                 <Link to="/profile/wallet">Wallet</Link>
               </Breadcrumb.Item>
             </Breadcrumb>
-          </Col>
-        </Row>
-      </Container>
-      <Switch>
-        <Route path="/profile/Personal">
-          <Personal />
-        </Route>
-        <Route path="/profile/Bio">
-          <Bio />
-        </Route>
-        <Route path="/profile/Skills">
-          <Skills />
-        </Route>
-        <Route path="/profile/Schedule">
-          <Button
+                    </Col>
+                </Row>
+            </Container>
+            <Switch>
+                <Route path="/profile/Personal">
+                    <Personal />
+                </Route>
+                <Route path="/profile/Bio">
+                    <Bio text={me.bio} />
+                </Route>
+                <Route path="/profile/Skills">
+                    <Skills skills={me.skills} />
+
+                </Route>
+                <Route path="/profile/Schedule">
+                <Button
             variant="primary"
             onClick={NewTab}
           >
             <i className="bi bi-door-open-fill"></i> Enter room
           </Button>
-          <Schedule />
-        </Route>
-        <Route path="/profile/Wallet">
-          <Wallet />
-        </Route>
-      </Switch>
-    </>
-  );
-};
+                    <Schedule />
+
+                </Route>
+                <Route path="/profile/Wallet">
+                    <Wallet />
+
+                </Route>
+                <Route path='/sessions/:room_id'>
+
+                </Route>
+            </Switch>
+        </>);
+}
 
 export default BreadCrumbNav;
