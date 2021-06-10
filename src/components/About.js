@@ -14,7 +14,7 @@ export default function About() {
             </h1>
 
 
-            <Container >
+            <Container className="about--container">
                 <Col >
                 <h1 className="about-title">Meet our team</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quae consectetur eligendi possimus, voluptas fuga optio natus, sequi dolores ducimus veritatis voluptatum 

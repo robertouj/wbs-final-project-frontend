@@ -1,24 +1,26 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import "./Personal.css"
 
 export default function Personal() {
   return (
     <>
       <h1>About me</h1>
-      <h3>Account details</h3>
-      <Container>
+      <Container className="personal--container">
         <Row>
           <Col className="d-flex justify-content-center">
             <p>Fill the information related to your user profile.</p>
             <form>
               <div className="control">
+                <h3>Account details</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, asperiores.</p>
                 <label for="foro">Your avatar</label>
                 <input
                   type="file"
                   className="name"
                   required
-                  placeholder="send a foto..."
-                />
+                  placeholder="send a photo..."
+                  />
                 <label for="name">How other see your name</label>
                 <input
                   type="text"
