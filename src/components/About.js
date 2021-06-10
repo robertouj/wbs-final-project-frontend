@@ -9,9 +9,6 @@ export default function About() {
     return (
         
               <>
-            <h1 >
-                About Page
-            </h1>
 
 
             <Container className="about--container">
@@ -30,10 +27,10 @@ export default function About() {
                 <Row className="rows">
                     <Col className="columns " >
                         <Card  className="mx-auto mb-4" style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg" />
+                            <Card.Img variant="top" src="./Dimitris photo.JPG" />
                             <Card.Body>
                                 <Card.Title className="text-muted card--title">Dimitris</Card.Title>
-                                <Card.Subtitle className="mb-2 ">Frontend Team</Card.Subtitle>
+                                <Card.Subtitle className="mb-2 ">Frontend Team, Barrel Rider</Card.Subtitle>
                                 <Card.Subtitle className="mb-2 text-muted card--work">FullStack DEV</Card.Subtitle>
                                 <br></br>
                                 <br></br>

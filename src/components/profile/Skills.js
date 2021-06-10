@@ -3,6 +3,7 @@ import { useState } from 'react';
 import AddSkill from './skills-comps/AddSkill'
 import SkillsList from './skills-comps/SkillsList'
 import { Col, Container, Row } from 'react-bootstrap';
+import "../profile/skills-comps/Skill.css"
 
 export default function Skills({ skills })
 {
@@ -15,7 +16,7 @@ export default function Skills({ skills })
   console.log(newSkills)
 
 
-
+ 2
   return (
     <>
       <h1>Skills</h1>

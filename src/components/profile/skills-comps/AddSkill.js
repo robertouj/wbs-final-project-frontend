@@ -82,8 +82,9 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills })
                                 onClick={clickHandler}
                                 style={{
                                     height: '2.6rem',
-                                    backgroundColor: '#b6c9f0',
+                                    backgroundColor: 'rgb(18,93,152,.7)',
                                     marginBottom: '5px'
+                                    
                                 }}
                                 type="submit">ADD</Button>
                         </form>

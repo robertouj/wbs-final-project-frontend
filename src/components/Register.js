@@ -39,7 +39,7 @@ export default function Register() {
             <p>Enjoy your learning!!</p>
             <div className="actions">
               <p className="register--small--text">You can also search something to learn</p>
-              <a href="/">what do you need?</a>
+              <a className="register--link" href="/">what do you need?</a>
             </div>
           </div>
         ) : (

@@ -1,37 +1,36 @@
 import React from 'react'
 import { Row, Col, Button, Form, Container } from 'react-bootstrap';
-import { TiDeleteOutline } from 'react-icons/ti'
+import { RiDeleteBin2Line } from 'react-icons/ri'
+import "./Skill.css"
 
 export default function Skill({ skills })
 {
 
     // console.log(skills)
     return (
-        <Container style={{
-            backgroundColor: 'white',
-            border: "thin solid",
-            boxShadow: '2px 2px 46px -16px #000000',
-            maxWidth: '12rem'
-        }}>
+        <Container  className="skill--test">
             <Col className={"my-3 "} >
-                <div
+                <div 
 
                 >
 
                     <p style={{
+                        
                         textAlign: 'center',
+                        fontWeight: '640',
                         marginBottom: 0,
-                        color: '#9482ff'
+                        color: '#c449c2',
+                        fontSize: '1.5rem'
                     }}>
                         {`#${ skills }`}
 
                     </p>
                 </div>
-                <Row>
+                
                     <div style={{ textAlign: 'center' }}>
-                        <Button style={{ backgroundColor: '#b6c9f0', width: '30px', height: '30px' }}>  <TiDeleteOutline />   </Button>
+                        <Button style={{ backgroundColor: '#b6c9f0'  }}>  <RiDeleteBin2Line />   </Button>
                     </div>
-                </Row>
+                
 
             </Col>
         </Container>
