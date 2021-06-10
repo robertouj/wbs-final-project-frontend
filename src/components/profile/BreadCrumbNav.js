@@ -1,5 +1,5 @@
 import { Link, Switch, Route } from "react-router-dom";
-import { Breadcrumb, Container, Row, Col } from "react-bootstrap";
+import { Breadcrumb, Container, Row, Col, Nav } from "react-bootstrap";
 import Personal from "./Personal";
 import Skills from "./Skills";
 import Schedule from "./Schedule";
@@ -20,29 +20,24 @@ const BreadCrumbNav = ({ me, setMe }) => {
             >
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/profile/personal">Personal-details</Link>
+                <Link to="/profile/about-me">about me</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-1">
-                  <Link to="/profile/bio">Bio</Link>
+                  <Link to="/profile/skills">my skills</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  <Link to="/profile/skills">Skills</Link>
+                <Link to="/profile/schedule">my schedule</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-3">
-                  <Link to="/profile/schedule">Schedules</Link>
+                <Link to="/profile/wallet">timeCoin wallet</Link>
                 </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="link-4">
-                  <Link to="/profile/wallet">Wallet</Link>
-                </Nav.Link>
-              </Nav.Item>
+              </Nav.Item>            
             </Nav>
           </Col>
         </Row>

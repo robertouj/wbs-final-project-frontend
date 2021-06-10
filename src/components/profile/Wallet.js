@@ -1,5 +1,6 @@
 import React from "react";
 import Cal from "./SimpleCalendar";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function Wallet() {
   return (
