@@ -6,12 +6,12 @@ function Notifications() {
 
   return (
     <>
-      <div className="sidebar__notifications">
+      {/* <div className="sidebar__notifications">
         <div style={{ display: "flex", justifyContent: "space-around" }}>
           <h2>Notifications: {notification || "-"}</h2>
           <h3>{isSessionAvailable && ">> Mentoring available <<"}</h3>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
