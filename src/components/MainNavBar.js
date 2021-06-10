@@ -15,15 +15,15 @@ export default function MainNavBar()
   return (
     <div >
       <Navbar style={{ backgroundColor: "#ac66cc" }} expand="sm" >
-        <Navbar.Brand className="ms-5" href="/">Coink!</Navbar.Brand>
+        <Navbar.Brand className="ms-5" href="/" style={{ color: "#ffd8cc", fontSize: '30px' }}>Coink!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto me-4 justify-content-between" >
-            <Nav.Link ><Link style={{ textDecoration: 'none' }} to="/" >Home</Link></Nav.Link>
-            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/About" >about</Link></Nav.Link>
-            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/profile" >profile</Link></Nav.Link>
-            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/login" >login</Link></Nav.Link>
-            <Nav.Link><Link style={{ textDecoration: 'none' }} to="/register" >register</Link></Nav.Link>
+          <Nav className="ms-auto me-4 justify-content-between" style={{ color: '#867ae9' }}>
+            <Nav.Link ><Link style={{ textDecoration: 'none', color: '#ffd8cc', fontSize: '20px' }} to="/" >Home</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none', color: '#ffd8cc', fontSize: '20px' }} to="/About" >About</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none', color: '#ffd8cc', fontSize: '20px' }} to="/profile" >Profile</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none', color: '#ffd8cc', fontSize: '20px' }} to="/login" >Login</Link></Nav.Link>
+            <Nav.Link><Link style={{ textDecoration: 'none', color: '#ffd8cc', fontSize: '20px' }} to="/register" >Register</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

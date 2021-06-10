@@ -20,7 +20,7 @@ export default function Skills({ skills })
     return (
         <>
 
-            <h2 className="mb-5" style={{ textAlign: "center" }}>Skills pageHello</h2>
+
             <Container >
                 <Row >
                     <Col className="d-flex justify-content-center">

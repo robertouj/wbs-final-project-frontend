@@ -1,5 +1,5 @@
 import { Link, Switch, Route } from 'react-router-dom'
-import { Breadcrumb, Container, Row, Col, Button, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Button, Nav } from 'react-bootstrap';
 import Personal from "./Personal"
 import Bio from "./Bio"
 import Skills from "./Skills"
@@ -9,10 +9,7 @@ import "./BreadCrumNav.css"
 
 const BreadCrumbNav = ({ me }) =>
 {
-  const NewTab = () =>
-  {
-    window.open(`/#/sessions/c9f2a12622782`, "_blank");
-  };
+
   return (
     <>
       <Container className="my-5 py-5 ">
@@ -55,11 +52,10 @@ const BreadCrumbNav = ({ me }) =>
               </Route>
               <Route path="/profile/Schedule">
                 <Button
-                  variant="primary"
-                  onClick={NewTab}
+
                 >
                   <i className="bi bi-door-open-fill"></i> Enter room
-          </Button>
+                </Button>
                 <Schedule />
 
               </Route>

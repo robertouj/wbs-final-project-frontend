@@ -8,11 +8,6 @@ body{
 .miniNav{
     background-color: #ffe5e2;
     padding: 0.5rem;
-    box-shadow: 3px 3px 8px rgb(0, 0, 0);
+    box-shadow: 5px 3px 15px rgb(0, 0, 0);
 }
 
-.profile{
-    
-    background-size:cover;
-    background-repeat: no-repeat;
-}

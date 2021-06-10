@@ -70,7 +70,7 @@ export default function SearchBar()
 
 
                     >
-                        <h2 >what do you want to learn?</h2>
+                        <h2 style={{ color: '#f98404' }}>what do you want to learn?</h2>
                         <form >
                             <input
                                 value={searchQuery}
@@ -81,7 +81,7 @@ export default function SearchBar()
                                 style={{ height: '2.6rem', width: '20rem', marginTop: '2px' }}
                             />
                             <Button
-                                style={{ height: '2.6rem', marginBottom: '5px', backgroundColor: '#ac66cc', borderRadius: 'none' }}
+                                style={{ height: '2.6rem', marginBottom: '5px', backgroundColor: '#f98404', borderRadius: 'none' }}
                                 type="submit"
 
                                 onClick={clickHandler}

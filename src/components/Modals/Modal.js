@@ -46,7 +46,7 @@ export default function Modals()
     const [modalShow, setModalShow] = React.useState(false);
     return (
         <div>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Button variant="warning" onClick={() => setModalShow(true)}>
                 <BsCalendar />
             </Button>
 
