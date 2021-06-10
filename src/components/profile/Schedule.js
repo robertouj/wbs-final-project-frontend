@@ -13,11 +13,11 @@ export default function Schedule()
 
 
                     <Col
-                        xl={{ span: 12, offset: 4 }}
-                        lg={{ span: 12, offset: 4 }}
-                        md={{ span: 12, offset: 3 }}
-                        sm={{ span: 12, offset: 1 }}
-                        xs={{ span: 12, offset: 1 }}
+                        xl={{ span: 10, offset: 4 }}
+                        lg={{ span: 10, offset: 3 }}
+                        md={{ span: 10, offset: 2 }}
+                        sm={{ span: 8 }}
+                        xs={{ span: 1 }}
                     >
                         <Cal />
                     </Col>

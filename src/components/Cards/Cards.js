@@ -31,7 +31,7 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
 
                                     </Col>
                                     <Col sm={9}>
-                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   #${ skill2 }   `}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   ${ skill2 !== '' ? '#' + skills2 : '' }   `}</Card.Subtitle>
                                         <Card.Text>
                                             {bio}
                                         </Card.Text>

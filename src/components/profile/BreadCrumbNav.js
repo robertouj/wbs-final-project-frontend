@@ -20,7 +20,7 @@ const BreadCrumbNav = ({ me }) =>
           <Col
 
           >
-            <Nav fill variant="tabs" defaultActiveKey="/home" className="miniNav">
+            <Nav fill variant="tabs" className="miniNav">
               <Nav.Item>
                 <Nav.Link ><Link to="/profile/personal">Personal-details</Link></Nav.Link>
               </Nav.Item>
