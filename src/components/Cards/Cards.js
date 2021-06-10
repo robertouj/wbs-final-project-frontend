@@ -36,13 +36,11 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
                                             {bio}
                                         </Card.Text>
                                         <Row>
-                                            <Col lg={1}>
-                                                <Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link>
+                                            <Col >
+                                                <button style={{ border: ' none', backgroundColor: 'white' }}><Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link></button>
+                                                <button style={{ border: ' none', backgroundColor: 'white' }}><Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link></button>
+                                            </Col>
 
-                                            </Col>
-                                            <Col>
-                                                <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
-                                            </Col>
                                         </Row>
                                     </Col>
                                 </Row>

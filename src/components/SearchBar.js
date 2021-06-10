@@ -63,7 +63,7 @@ export default function SearchBar()
     return (
         <div style={{ width: '100%' }}>
 
-            <Container style={{ marginTop: '5rem' }}>
+            <Container fluid style={{ marginTop: '5rem' }}>
                 <Row >
                     <h2 style={{ marginLeft: '1rem' }}>what do you want to learn?</h2>
                     <Col

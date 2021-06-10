@@ -25,7 +25,7 @@ const SkillsList = ({ skills, newSkills }) =>
     return (
         <>
 
-            <div style={{ backgroundColor: "lightsteelblue", padding: '1rem 0', margin: '0 20rem' }}>
+            <div style={{ backgroundColor: "lightsteelblue", padding: '1rem' }}>
                 <Container>
                     <Row>
                         <Col>
