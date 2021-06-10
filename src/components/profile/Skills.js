@@ -3,6 +3,7 @@ import { useState } from 'react';
 import AddSkill from './skills-comps/AddSkill'
 import SkillsList from './skills-comps/SkillsList'
 import APIData from '../../MockData.json'
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Skills({ skills })
 {
@@ -15,12 +16,25 @@ export default function Skills({ skills })
     console.log(newSkills)
 
 
+
     return (
-        <div>
-            Skills
+        <>
+
             <h2 className="mb-5" style={{ textAlign: "center" }}>Skills pageHello</h2>
-            <AddSkill text={name} setText={setName} newSkills={newSkills} setNewSkills={setNewSkills} />
-            <SkillsList skills={skills} newSkills={newSkills} />
-        </div>
+            <Container >
+                <Row >
+                    <Col className="d-flex justify-content-center">
+                        <AddSkill text={name} setText={setName} newSkills={newSkills} setNewSkills={setNewSkills} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <SkillsList skills={skills} newSkills={newSkills} />
+                    </Col>
+                </Row>
+            </Container>
+
+
+        </>
     )
 }

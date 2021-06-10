@@ -28,7 +28,7 @@ export default function Skill({ skills })
                 </div>
                 <Row>
                     <div style={{ textAlign: 'center' }}>
-                        <Button  >  <TiDeleteOutline />   </Button>
+                        <Button style={{ backgroundColor: '#b6c9f0' }}>  <TiDeleteOutline />   </Button>
                     </div>
                 </Row>
 

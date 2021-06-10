@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import React from 'react'
 import { useState } from 'react'
 import SearchBar from './components/SearchBar'
