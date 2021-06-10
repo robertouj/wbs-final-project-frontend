@@ -1,0 +1,36 @@
+.register--words {
+  color: #9482ff;
+}
+/* .auth * strong {
+  color: red;
+} */
+.auth * p {
+  color: white;
+}
+.auth * a {
+  list-style: none;
+}
+.register--form {
+  margin: 0.4rem;
+}
+
+label {
+  color: rgb(253, 236, 236);
+}
+.actions > h3 {
+  color: rgb(253, 236, 236);
+}
+.actions > a {
+  color: rgb(253, 236, 236);
+  font-size: 1.3rem;
+}
+.register--small--text {
+  color: rgb(253, 236, 236);
+}
+.register--word--profile {
+  color: #d8c945;
+  font-weight: 600;
+}
+.register--form > h3 {
+  color: rgb(253, 236, 236);
+}

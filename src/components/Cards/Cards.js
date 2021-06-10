@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card,  } from 'react-bootstrap';
 import './Cards.css'
 import { CgMediaLive } from 'react-icons/cg';
 import Modals from "../Modals/Modal";

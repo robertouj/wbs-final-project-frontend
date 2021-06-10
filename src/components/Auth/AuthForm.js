@@ -16,7 +16,7 @@ const AuthForm = () => {
         <Redirect to="/" />
       ) : (
         <section className="auth">
-          <h1>{isLogin ? "Login" : "Register now"}</h1>
+          <h1>{isLogin ? "Register now" : "Login"}</h1>
           <form>
             <div className="control">
               <label htmlFor="email">Add your E-mail</label>
@@ -36,8 +36,8 @@ const AuthForm = () => {
                 onClick={switchAuthModeHandler}
               >
                 {isLogin
-                  ? "Create new Account"
-                  : "Login with an existing account"}
+                  ? "Login with an existing account" 
+                  : "Create new Account"}
               </button>
             </div>
           </form>
