@@ -40,8 +40,8 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
                                         <Row>
                                             <Col >
                                                 <Button style={{ border: ' none', backgroundColor: 'white' }}><Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link></Button>
-                                                <Button variant="outline-warning" style={{}}
-                                                    onClick={NewTab}><Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link></Button>
+                                                <Button variant="outline-warning" s
+                                                    onClick={NewTab}><CgMediaLive /> Live Session</Button>
                                             </Col>
 
                                         </Row>
