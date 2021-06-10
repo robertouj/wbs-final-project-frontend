@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-
-
 import BreadCrumbNav from './BreadCrumbNav'
-import SideBar from './SideBar';
+
 
 const APIURL = 'https://wbs-final-json-api.herokuapp.com/users';
 const meId = '60be54163e9bbcd950a171c2';
@@ -34,7 +32,7 @@ const Profile = () =>
 
             <div className="profile">
                 <BreadCrumbNav me={me} />
-                {/* <SideBar /> */}
+
             </div>
         </>
     );

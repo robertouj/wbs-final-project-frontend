@@ -25,7 +25,7 @@ function MyVerticallyCenteredModal(props)
                         </Col>
                     </Row>
                     <Row >
-                        <Col lg={{ offset: 3 }}>
+                        <Col >
                             <Cal />
                         </Col>
                     </Row>
@@ -45,8 +45,8 @@ export default function Modals()
 
     const [modalShow, setModalShow] = React.useState(false);
     return (
-        <div>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+        <div >
+            <Button variant="warning" onClick={() => setModalShow(true)}>
                 <BsCalendar />
             </Button>
 

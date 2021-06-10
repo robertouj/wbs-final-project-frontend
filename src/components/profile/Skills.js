@@ -1,24 +1,29 @@
-import React from "react";
-import { useState } from "react";
-import AddSkill from "./skills-comps/AddSkill";
-import SkillsList from "./skills-comps/SkillsList";
-import APIData from "../../MockData.json";
-import { Col, Container, Row } from "react-bootstrap";
+import React from 'react'
+import { useState } from 'react';
+import AddSkill from './skills-comps/AddSkill'
+import SkillsList from './skills-comps/SkillsList'
+import { Col, Container, Row } from 'react-bootstrap';
 
-export default function Skills({ skills }) {
+export default function Skills({ skills })
+{
+
+
   const [newSkills, setNewSkills] = useState([]);
   const [name, setName] = useState([]);
 
-  console.log(newSkills);
+
+  console.log(newSkills)
+
+
 
   return (
     <>
       <h1>Skills</h1>
       <h3>bla bla bla</h3>
 
-      <Container>
-        <Row>
-          <p>sddasff fsdfadsfdsa dsfdsfdsf.</p>
+      <Container >
+        <Row >
+
           <Col className="d-flex justify-content-center">
             <AddSkill
               text={name}
@@ -34,6 +39,8 @@ export default function Skills({ skills }) {
           </Col>
         </Row>
       </Container>
+
+
     </>
-  );
+  )
 }

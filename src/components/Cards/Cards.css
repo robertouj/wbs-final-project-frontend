@@ -30,9 +30,13 @@ a {
   color: black;
 }
 .mentor--icon {
-  color: black;
-  font-size: 1.6rem;
+  
+ 
 }
 .mentor--icon:hover {
   color: green;
+}
+
+.mentor--name {
+  color:#03256c;
 }

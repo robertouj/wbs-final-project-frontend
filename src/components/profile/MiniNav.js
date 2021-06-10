@@ -8,7 +8,7 @@ import Schedule from "./Schedule"
 import Wallet from "./Wallet"
 
 
-export default function SideBar()
+export default function MiniNav()
 {
 
     const NewTab = () =>

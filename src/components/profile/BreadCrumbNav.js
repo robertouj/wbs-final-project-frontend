@@ -6,7 +6,8 @@ import Schedule from "./Schedule";
 import Wallet from "./Wallet";
 import "./BreadCrumNav.css";
 
-const BreadCrumbNav = ({ me, setMe }) => {
+const BreadCrumbNav = ({ me, setMe }) =>
+{
   return (
     <>
       <Container className="my-5 py-5 ">
@@ -20,7 +21,7 @@ const BreadCrumbNav = ({ me, setMe }) => {
             >
               <Nav.Item>
                 <Nav.Link>
-                <Link to="/profile/about-me">about me</Link>
+                  <Link to="/profile/about-me">about me</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -30,14 +31,14 @@ const BreadCrumbNav = ({ me, setMe }) => {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                <Link to="/profile/schedule">my schedule</Link>
+                  <Link to="/profile/schedule">my schedule</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-3">
-                <Link to="/profile/wallet">timeCoin wallet</Link>
+                  <Link to="/profile/wallet">timeCoin wallet</Link>
                 </Nav.Link>
-              </Nav.Item>            
+              </Nav.Item>
             </Nav>
           </Col>
         </Row>

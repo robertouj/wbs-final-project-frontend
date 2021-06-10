@@ -61,28 +61,27 @@ export default function SearchBar()
 
 
     return (
-        <div style={{ width: '100%' }}>
+        <div >
 
-            <Container fluid style={{ marginTop: '5rem' }}>
-                <Row >
-                    <h2 style={{ marginLeft: '1rem' }}>what do you want to learn?</h2>
+            <Container fluid style={{ marginTop: '5rem' }} >
+                <Row style={{ textAlign: 'center' }}>
+
                     <Col
 
-                        md={{ span: 6 }}
-                        sm={{ span: 10 }}
-                        className="ms-3">
 
-                        <form  >
+                    >
+                        <h2 style={{ color: '#f98404' }}>what do you want to learn?</h2>
+                        <form >
                             <input
                                 value={searchQuery}
                                 type="text"
                                 onChange={searchHandler}
                                 onKeyPress={handelEnter}
                                 placeholder="type a skill..."
-                                style={{ height: '2.6rem', width: '15rem', marginTop: '2px' }}
+                                style={{ height: '2.6rem', width: '20rem', marginTop: '2px' }}
                             />
                             <Button
-                                style={{ height: '2.6rem', marginBottom: '5px', backgroundColor: '#ac66cc', borderRadius: 'none' }}
+                                style={{ height: '2.6rem', marginBottom: '5px', backgroundColor: '#f98404', borderRadius: 'none' }}
                                 type="submit"
 
                                 onClick={clickHandler}
@@ -93,7 +92,7 @@ export default function SearchBar()
 
                 </Row>
                 <Row>
-                    <Col className='mx-auto'>
+                    <Col className='mx-auto my-5'>
                         <CardList mentors={mentors} />
                     </Col>
                 </Row>
