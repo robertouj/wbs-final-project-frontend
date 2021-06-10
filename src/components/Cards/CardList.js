@@ -8,7 +8,8 @@ export default function CardList({ mentors })
 
     let allData = [],
         skill1 = '',
-        skill2 = '';
+        skill2 = '',
+        skill3 = '';
 
 
 
@@ -22,8 +23,7 @@ export default function CardList({ mentors })
             {allData.map(i => (
                 <Cards
                     nickname={i.name}
-                    skill1={i.skills[0].name}
-                    skill2={i.skills[1] ? i.skills[1].name : ''}
+                    skills={i.skills}
                     bio={i.bio}
                     photo={i.photo}
                     experience={i.experience}

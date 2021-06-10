@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link, Route, Switch } from "react-router-dom";
 import Profile from "./profile/Profile";
 import Register from "./Register";
 import Login from "./Login";
 import SearchBar from "./SearchBar";
-
+import logo from '../img/logo1.png'
 import About from "./About";
 
 export default function MainNavBar()
@@ -15,34 +15,34 @@ export default function MainNavBar()
   return (
     <div>
       <Navbar style={{ backgroundColor: "#ac66cc" }} expand="sm">
-        <Navbar.Brand className="ms-5" href="/">
-          Coink!
+        <Navbar.Brand className="ms-5" href="/" style={{ color: '#ffd8cc' }}>
+          <Image src={logo} width="200rem" rounded />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto me-4 justify-content-between">
             <Nav.Link>
-              <Link style={{ textDecoration: "none" }} to="/">
+              <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/">
                 Home
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link style={{ textDecoration: "none" }} to="/About">
+              <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/About">
                 about
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link style={{ textDecoration: "none" }} to="/profile/about-me">
+              <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/profile/about-me">
                 profile
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link style={{ textDecoration: "none" }} to="/login">
+              <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/login">
                 login
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link style={{ textDecoration: "none" }} to="/register">
+              <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/register">
                 register
               </Link>
             </Nav.Link>
