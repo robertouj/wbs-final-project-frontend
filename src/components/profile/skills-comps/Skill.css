@@ -1,0 +1,15 @@
+.skill--test {
+  color: red;
+  font-size: 3rem;
+  background-color: rgb(255, 255, 255, 0.2);
+  width: 14rem;
+}
+/* style={{
+    backgroundColor: 'white',
+    border: "thin solid",
+    boxShadow: '2px 2px 46px -16px #000000',
+    maxWidth: '12rem'
+}} */
+.skill-test * p {
+  font-size: 3rem;
+}

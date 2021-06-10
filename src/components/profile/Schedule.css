@@ -1,0 +1,8 @@
+.schedule--container {
+  border: 0.1rem solid black;
+  padding: 1rem;
+}
+.schedule--container * Button {
+  margin: 1rem;
+  color: rgb(23, 192, 23);
+}

@@ -70,7 +70,7 @@ export default function SearchBar()
 
 
                     >
-                        <h2 style={{ color: '#f98404' }}>what do you want to learn?</h2>
+                        <h2 style={{ color: '#77acf1' }}>what do you want to learn?</h2>
                         <form >
                             <input
                                 value={searchQuery}

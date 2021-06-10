@@ -21,28 +21,28 @@ export default function MiniNav()
                 <div style={{ minWidth: '15rem' }}>
                     <Col>
                         <Row>
-                            <Col className="my-3">
-                                <Link to="/profile/personal">Personal-details</Link>
+                            <Col className="my-3" >
+                                <Link to="/profile/personal" style={{ color: '#9482ff' }}>Personal-details</Link>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="my-3">
-                                <Link to="/profile/bio">Bio</Link>
+                                <Link to="/profile/bio" style={{ color: '#9482ff' }}>Bio</Link>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="my-3">
-                                <Link to="/profile/skills">Skills</Link>
+                                <Link to="/profile/skills" style={{ color: '#9482ff' }}>Skills</Link>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="my-3">
-                                <Link to="/profile/schedule">Schedules</Link>
+                                <Link to="/profile/schedule" style={{ color: '#9482ff' }}>Schedules</Link>
                             </Col >
                         </Row>
                         <Row>
                             <Col className="my-3">
-                                <Link to="/profile/wallet">Wallet</Link>
+                                <Link to="/profile/wallet" style={{ textDecoration: 'none', color: '#9482ff' }}>Wallet</Link>
                             </Col>
                         </Row>
                     </Col>

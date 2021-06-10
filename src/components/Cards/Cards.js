@@ -7,7 +7,7 @@ import Modals from "../Modals/Modal";
 
 
 
-export default function Cards({ nickname, bio, skill1, skill2, photo })
+export default function Cards({ nickname, bio, photo, skills })
 {
     const NewTab = () =>
     {
@@ -33,7 +33,7 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
 
                                     </Col>
                                     <Col sm={9}>
-                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   ${ skill2 !== '' ? '#' + skill2 : '' }   `}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-2 text-muted card--skills">{skills.map(i => `#${ i.name }`)}</Card.Subtitle>
                                         <Card.Text>
                                             {bio}
                                         </Card.Text>

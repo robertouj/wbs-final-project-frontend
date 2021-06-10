@@ -1,0 +1,17 @@
+.personal--container {
+  border: 0.2rem solid black;
+}
+.personal--container * label {
+  color: black !important;
+}
+.personal--bio {
+  border: 0.2rem dotted black;
+}
+
+textarea {
+  width: 30rem;
+  height: 10rem;
+}
+.personal--img {
+  width: 7rem;
+}
