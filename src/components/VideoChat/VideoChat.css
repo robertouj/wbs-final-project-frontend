@@ -1,0 +1,50 @@
+.test {
+  background-color: rgb(80, 78, 78);
+  min-height: 100vh;
+  min-width: 100%;
+  border: white;
+}
+.test2 {
+  background-color: rgb(80, 78, 78);
+}
+.footer--container {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 90.3%;
+  right: 35%;
+  border-radius: 6rem;
+  width: 50rem;
+  z-index: 2;
+}
+.call--icons {
+  color: rgb(80, 78, 78);
+  font-size: 3rem;
+  margin: 1rem;
+}
+.call-icons-phone {
+  color: red;
+  font-size: 2.3rem !important;
+}
+.chat-names {
+  font-size: 2rem;
+  color: rgb(248, 232, 232);
+}
+.call--icons--2 {
+  font-size: 2.7rem !important;
+}
+.test--remote {
+  position: absolute !important;
+  top: 0%;
+  left: 16.2%;
+  height: 20%;
+  z-index: 100;
+  margin: 2rem;
+}
+.test3 {
+  position: absolute !important;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

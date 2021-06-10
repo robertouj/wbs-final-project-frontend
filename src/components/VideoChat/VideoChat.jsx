@@ -7,8 +7,13 @@ import SlidingPane from "react-sliding-pane";
 import Chat from "./Chat";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
+import { BsChatDots } from 'react-icons/bs';
+import { FiPhoneOff } from 'react-icons/fi';
+
+
 
 import "./sliding-pane.css";
+import "./VideoChat.css";
 
 function VideoChat() {
   const { myVideo, userVideo, name, remoteName, stream, leaveCall, states } =
@@ -30,19 +35,19 @@ function VideoChat() {
 
   return (
     <>
-      <Row>
-        <Col>
-          <div className="video-grid__local_video">
-            <div>My name: {name || "NoName"}</div>
+      <Row className="entire--background">
+        <Col className="test2">
+          <div className="video-grid__local_video test">
+            <div className="chat-names">My name: {name || "NoName"}</div>
             {/* Video element where show the local stream from getUserMedia() */}
             <video
               playsInline
               ref={myVideo}
               autoPlay
               muted="muted"
-              className="local_video"
+              className="local_video test3"
             />
-            <div className="local_video_icons">
+            {/* <div className="local_video_icons">
               {!micMuted ? (
                 <>
                   <i className="bi bi-mic-mute-fill" onClick={toggleMic}></i>
@@ -78,18 +83,18 @@ function VideoChat() {
               <Button onClick={() => setPaneOpen(true)}>
                 <i className="bi bi-chat-left-text"></i> Chat Panel
               </Button>
-            </div>
+            </div> */}
           </div>
         </Col>
-        <Col>
-          <div className="video-grid__remote_video">
-            <div>Remote name: {remoteName || "NoName"}</div>
+        <Col className="test2">
+          <div className="video-grid__remote_video test">
+            <div className="chat-names">Remote name: {remoteName || "NoName"}</div>
             {/* Video element where show the remote stream from RTCPeerconnection */}
             <video
               playsInline
               ref={userVideo}
               autoPlay
-              className="remote_video"
+              className="remote_video test--remote"
             />
           </div>
           <SlidingPane
@@ -118,7 +123,51 @@ function VideoChat() {
             
            
           </SlidingPane>
+          <Row>
+        <footer class=" footer--container mx-auto">
+          {/* blockquote-footer  */}
+          <div className="local_video_icons">
+              {!micMuted ? (
+                <>
+                  <i className="bi bi-mic-mute-fill call--icons" onClick={toggleMic}></i>
+                </>
+              ) : (
+                <>
+                  <i className="bi bi-mic-fill call--icons" onClick={toggleMic}></i>
+                </>
+              )}
+              {videoMuted ? (
+                <>
+                  <i
+                    className="bi bi-camera-video-off-fill call--icons"
+                    onClick={toggleVideo}
+                  ></i>
+                </>
+              ) : (
+                <>
+                  <i
+                    className="bi bi-camera-video-fill call--icons"
+                    onClick={toggleVideo}
+                  ></i>
+                </>
+              )}
+              <FiPhoneOff
+                className="call--icons call-icons-phone"
+                disabled={!states.hangupButtonEnabled}
+                variant="primary"
+                onClick={leaveCall}
+              >
+                <i className="bi bi-door-closed-fill "></i> Close room
+              </FiPhoneOff>
+
+              <BsChatDots className="call--icons call--icons--2" onClick={() => setPaneOpen(true)}>
+                <i className="bi bi-chat-left-text "></i> Chat Panel
+              </BsChatDots>
+            </div>
+          </footer>
+        </Row>
         </Col>
+
       </Row>
     </>
   );
