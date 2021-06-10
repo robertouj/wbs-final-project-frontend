@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
+import './Chat.css'
 
 import React, { useContext, useState } from "react";
 import { SocketContext } from "./Context";
@@ -17,8 +18,9 @@ function Chat() {
 
       <InputGroup className="mb-3">
         <FormControl
+          className=" text-test"
           as="textarea"
-          placeholder="Text to send..."
+          placeholder="Enter your text..."
           onChange={(e) => setChatText(e.target.value)}
           aria-label="Text to send"
           aria-describedby="basic-addon2"
@@ -29,7 +31,7 @@ function Chat() {
             }
           }}
         />
-        <Button
+        {/* <Button
           variant="primary"
           id="button-addon2"
           onClick={() => {
@@ -37,7 +39,7 @@ function Chat() {
           }}
         >
           Send
-        </Button>
+        </Button> */}
       </InputGroup>
     </>
   );
