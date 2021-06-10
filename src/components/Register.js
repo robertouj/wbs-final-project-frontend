@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./Register.css";
 
-export default function Register() {
+export default function Register()
+{
   const [isReady, setIsReady] = useState(false);
 
   return (
@@ -27,7 +28,7 @@ export default function Register() {
               also <strong className="register--words">learn to know yourself</strong>.
             </p>
             <p>
-              Go to your <a className="register--word--profile" href="/profile/skills">profile</a>, fill out your bio,{" "}
+              Go to your <a className="register--word--profile" href="#/profile/about-me">profile</a>, fill out your bio,{" "}
               <strong className="register--words">and your skills</strong> and you
               will be ready to <strong className="register--words">contribute to our community</strong>.
             </p>

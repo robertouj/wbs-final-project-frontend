@@ -22,8 +22,8 @@ export default function Schedule()
 
 
           <Col
-            xl={{ span: 10, offset: 1 }}
-            lg={{ span: 10, offset: 1 }}
+            xl={{ span: 10 }}
+            lg={{ span: 10 }}
             md={{ span: 10, offset: 1 }}
             sm={{ span: 12 }}
             xs={{ span: 12 }}

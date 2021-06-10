@@ -18,25 +18,26 @@ const BreadCrumbNav = ({ me, setMe }) =>
               variant="tabs"
               defaultActiveKey="/home"
               className="miniNav"
+
             >
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/profile/about-me">about me</Link>
+                  <Link to="/profile/about-me" style={{ textDecoration: 'none', color: '#3f3697' }}>About me</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-1">
-                  <Link to="/profile/skills">my skills</Link>
+                  <Link to="/profile/skills" style={{ textDecoration: 'none', color: '#3f3697' }}>My Skills</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  <Link to="/profile/schedule">my schedule</Link>
+                  <Link to="/profile/schedule" style={{ textDecoration: 'none', color: '#3f3697' }}>My Schedule</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-3">
-                  <Link to="/profile/wallet">timeCoin wallet</Link>
+                  <Link to="/profile/wallet" style={{ textDecoration: 'none', color: '#3f3697' }}>TimeCoin Wallet</Link>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -46,7 +47,7 @@ const BreadCrumbNav = ({ me, setMe }) =>
         <Row>
           <Col className="justify-content-center mt-5">
             <Switch>
-              <Route path="/profile/about-me">
+              <Route path="/profile/about-me" >
                 <Personal />
               </Route>
               <Route path="/profile/skills">
