@@ -1,1 +1,13 @@
 
+body{
+    background-image: url(./img/3649732.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.miniNav{
+    background-color: #ffe5e2;
+    padding: 0.5rem;
+    box-shadow: 5px 3px 15px rgb(0, 0, 0);
+}
+

@@ -23,7 +23,7 @@ export default function CardList({ mentors })
                 <Cards
                     nickname={i.name}
                     skill1={i.skills[0].name}
-                    skill2={i.skills[1].name}
+                    skill2={i.skills[1] ? i.skills[1].name : ''}
                     bio={i.bio}
                     photo={i.photo}
                     experience={i.experience}

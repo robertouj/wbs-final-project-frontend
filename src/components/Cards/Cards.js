@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
 import './Cards.css'
 import { CgMediaLive } from 'react-icons/cg';
 import Modals from "../Modals/Modal";
@@ -9,7 +9,10 @@ import Modals from "../Modals/Modal";
 
 export default function Cards({ nickname, bio, skill1, skill2, photo })
 {
-
+    const NewTab = () =>
+    {
+        window.open(`/#/sessions/c9f2a12622782`, "_blank");
+    };
     return (
 
 
@@ -20,29 +23,27 @@ export default function Cards({ nickname, bio, skill1, skill2, photo })
                 <Col className="my-5 " >
                     <Card  >
                         <Card.Body className="card--container">
-                            <Card.Title className="mb-5 ms-3 mentor--name">{nickname}</Card.Title>
-                            <Container className="">
+                            <Card.Title className="my-3 ms-4 mentor--name">{nickname}</Card.Title>
+                            <Container >
                                 <Row>
-                                    <Col >
-                                        <Image src={'https://picsum.photos/200/300'} width="100rem" roundedCircle />
+                                    <Col className="ms-2 my-3" >
+                                        <Image src={'https://picsum.photos/200/300'} width="200rem" rounded />
                                         <br></br>
-                                        <span>placeholder</span>
-                                        <span>placeholder</span>
+
 
                                     </Col>
                                     <Col sm={9}>
-                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   #${ skill2 }   `}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-2 text-muted card--skills">{` #${ skill1 }   ${ skill2 !== '' ? '#' + skill2 : '' }   `}</Card.Subtitle>
                                         <Card.Text>
                                             {bio}
                                         </Card.Text>
                                         <Row>
-                                            <Col lg={1}>
-                                                <Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link>
+                                            <Col >
+                                                <Button style={{ border: ' none', backgroundColor: 'white' }}><Card.Link className="mentor--icon" href="#"><Modals /> </Card.Link></Button>
+                                                <Button variant="outline-warning" s
+                                                    onClick={NewTab}><CgMediaLive /> Live Session</Button>
+                                            </Col>
 
-                                            </Col>
-                                            <Col>
-                                                <Card.Link className="mentor--icon" href="#"><CgMediaLive /></Card.Link>
-                                            </Col>
                                         </Row>
                                     </Col>
                                 </Row>

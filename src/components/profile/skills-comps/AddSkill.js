@@ -58,14 +58,14 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills })
             <Container className="mb-5">
                 <Row>
                     <Col
-                        xl={{ span: 1, offset: 4 }}
-                        lg={{ span: 1, offset: 4 }}
-                        md={{ span: 2, offset: 3 }}
-                        sm={{ span: 1, offset: 2 }}
-                        xs={{ offset: 2 }}
-
-                    >
-                        <form >
+                        className="d-flex justify-content-center"
+                        style={{
+                            textAlign: 'center'
+                        }}>
+                        <form style={{
+                            height: '2.6rem',
+                            width: '500px'
+                        }}>
                             <input
                                 id="skill"
                                 name="skill"
@@ -74,21 +74,20 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills })
                                 type="text"
                                 value={text}
                                 placeholder="type a skill..."
-                                style={{ height: '2.6rem', width: '220px' }}
+                                style={{ height: '2.57rem', width: '220px' }}
 
                             />
-
+                            <Button
+                                className="bttn"
+                                onClick={clickHandler}
+                                style={{
+                                    height: '2.6rem',
+                                    backgroundColor: '#b6c9f0',
+                                    marginBottom: '5px'
+                                }}
+                                type="submit">ADD</Button>
                         </form>
                     </Col>
-                    <Col
-                        xl={{ offset: 1 }}
-                        lg={{ offset: 1 }}
-                        md={{ offset: 1 }}
-                        sm={{ offset: 3 }}
-                        xs={{ offset: 1 }}
-
-                    >
-                        <Button className="bttn" onClick={clickHandler} style={{ height: '2.6rem', backgroundColor: '#ac66cc' }} type="submit">ADD TO</Button></Col>
                 </Row>
 
             </Container>

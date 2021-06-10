@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
-
+import { Container } from 'react-bootstrap';
 import BreadCrumbNav from './BreadCrumbNav'
+
 
 const APIURL = 'https://wbs-final-json-api.herokuapp.com/users';
 const meId = '60be54163e9bbcd950a171c2';
@@ -10,7 +10,7 @@ const Profile = () =>
 {
     let [me, setMe] = useState({});
     const [isLoading, setIsLoading] = useState(false);
-    let [added, setAdded] = useState({})
+
     useEffect(() =>
     {
         setIsLoading(true)
@@ -26,9 +26,15 @@ const Profile = () =>
             .catch(() => console.log("request failed "))
     }, [])
 
-
+    console.log(me)
     return (
-        <BreadCrumbNav me={me} />
+        <>
+
+            <div className="profile">
+                <BreadCrumbNav me={me} />
+
+            </div>
+        </>
     );
 }
 
