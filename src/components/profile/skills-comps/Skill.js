@@ -20,15 +20,16 @@ export default function Skill({ skills })
 
                     <p style={{
                         textAlign: 'center',
-                        marginBottom: 0
+                        marginBottom: 0,
+                        color: '#9482ff'
                     }}>
-                        {skills}
+                        {`#${ skills }`}
 
                     </p>
                 </div>
                 <Row>
                     <div style={{ textAlign: 'center' }}>
-                        <Button style={{ backgroundColor: '#b6c9f0' }}>  <TiDeleteOutline />   </Button>
+                        <Button style={{ backgroundColor: '#b6c9f0', width: '30px', height: '30px' }}>  <TiDeleteOutline />   </Button>
                     </div>
                 </Row>
 
