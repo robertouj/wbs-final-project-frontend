@@ -1,5 +1,4 @@
 [
-  
   {
     "_id": { "$oid": "60c24e09d3656f1e273f1601" },
     "experience": 7,
@@ -11,11 +10,9 @@
       "live": false
     },
     "skills": [
-      {
-        "_id": { "$oid": "60c240c7ded44e002c638f79" },
-        "_id": { "$oid": "60c240e4ded44e002c638f7a" },
-        "_id": { "$oid": "60c24114ded44e002c638f7c" }
-      }
+      { "$oid": "60c240c7ded44e002c638f79" },
+      { "$oid": "60c240e4ded44e002c638f7a" },
+      { "$oid": "60c24114ded44e002c638f7c" }
     ]
   },
   {
@@ -29,11 +26,9 @@
       "live": false
     },
     "skills": [
-      {
-        "_id": { "$oid": "60c24b9003e4e669a73cef55" },
-        "_id": { "$oid": "60c24a2fded44e002c638f81" },
-        "_id": { "$oid": "60c24f2d03e4e669a73cef56" }
-      }
+      { "$oid": "60c24b9003e4e669a73cef55" },
+      { "$oid": "60c24a2fded44e002c638f81" },
+      { "$oid": "60c24f2d03e4e669a73cef56" }
     ]
   },
   {
@@ -47,10 +42,8 @@
       "live": false
     },
     "skills": [
-      {
-        "_id": { "$oid": "60c240faded44e002c638f7b" },
-        "_id": { "$oid": "60c24a15ded44e002c638f80" }
-      }
+      { "$oid": "60c240faded44e002c638f7b" },
+      { "$oid": "60c24a15ded44e002c638f80" }
     ]
   },
   {
@@ -64,13 +57,10 @@
       "live": false
     },
     "skills": [
-      {
-        "_id": { "$oid": "60c24132ded44e002c638f7e" },
-        "_id": { "$oid": "60c24b6803e4e669a73cef53" }
-      }
+      { "$oid": "60c24132ded44e002c638f7e" },
+      { "$oid": "60c24b6803e4e669a73cef53" }
     ]
-  }
-  ,
+  },
   {
     "_id": { "$oid": "60c24e34dafdb093b1b48e08" },
     "experience": 7,
@@ -82,10 +72,8 @@
       "live": false
     },
     "skills": [
-      {
-        "_id": { "$oid": "60c24b7303e4e669a73cef54" },
-        "_id": { "$oid": "60c2412aded44e002c638f7d" }
-      }
+      { "$oid": "60c24b7303e4e669a73cef54" },
+      { "$oid": "60c2412aded44e002c638f7d" }
     ]
   }
 ]
