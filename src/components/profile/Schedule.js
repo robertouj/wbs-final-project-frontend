@@ -30,7 +30,7 @@ export default function Schedule()
           >
             <Button variant="outline-warning "
               onClick={NewTab}><CgMediaLive /> Live Session </Button>
-            <Cal />
+            <Cal className="calender--container" />
           </Col>
 
         </Row>

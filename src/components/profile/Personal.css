@@ -1,6 +1,9 @@
 .personal--container {
-  border: 0.2rem solid black;
-  background-color: rgb(18,93,152,0.95);
+  /* border: 0.1rem solid black; */
+  /* background-color: rgb(150, 93, 152, 0.95); */
+  background-color: rgb(233, 185, 210, 0.9);
+  box-shadow: 3px 3px 8px black;
+  padding: 1.4rem;
 }
 .personal--container * label {
   color: black !important;
@@ -14,5 +17,9 @@ textarea {
   height: 10rem;
 }
 .personal--img {
-  width: 7rem;
+  min-width: 10rem;
+}
+
+h1 {
+  text-shadow: 3px 3px 8px rgb(92, 86, 86);
 }

@@ -7,12 +7,12 @@ export default function Wallet()
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>Wallet</h1>
-      <h3 style={{ textAlign: 'center' }}>bla bla bla</h3>
-      <Container>
+      
+      <Container className="personal--container">
         <Row>
           <Col className="d-flex justify-content-center">
-            <p>sddasff fsdfadsfdsa dsfdsfdsf.</p>
-            <p>sddasff fsdfadsfdsa dsfdsfdsf.</p>
+          <h3 style={{ textAlign: 'center' }}>Upcoming feature...</h3>
+            dffdgfdgfdg
           </Col>
         </Row>
       </Container>

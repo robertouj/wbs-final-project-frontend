@@ -9,7 +9,7 @@ export default function Skill({ me, skill, newSkills, setNewSkills, deleteHandle
   return (
     <Container className="skill--test">
       <Col className={"my-3 "}>
-        <div>
+        
           <p
             style={{
               textAlign: "center",
@@ -21,12 +21,12 @@ export default function Skill({ me, skill, newSkills, setNewSkills, deleteHandle
           >
             {`#${skill.name}`}
           </p>
-        </div>
+        
 
         <div style={{ textAlign: "center" }}>
-          <Button style={{ backgroundColor: "#b6c9f0" }}  onClick={() => deleteHandler(skill._id)}>
+          <Button style={{ backgroundColor: "transparent", border: 'none'}}  onClick={() => deleteHandler(skill._id)}>
             {" "}
-            <RiDeleteBin2Line />{" "}
+            <RiDeleteBin2Line className="skill--delete" />{" "}
           </Button>
         </div>
       </Col>

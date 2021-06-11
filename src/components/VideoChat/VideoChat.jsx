@@ -180,6 +180,7 @@ function VideoChat() {
                 {fullscreen ? (
                   <>
                     <AiOutlineFullscreenExit
+                      className="video--icons"
                       onClick={() => toggleFullscreen()}
                       fontSize="3em"
                     />
@@ -187,6 +188,7 @@ function VideoChat() {
                 ) : (
                   <>
                     <AiOutlineFullscreen
+                      className="video--icons"
                       onClick={() => toggleFullscreen()}
                       fontSize="3em"
                     />
@@ -196,6 +198,7 @@ function VideoChat() {
                 {screenshared ? (
                   <>
                     <MdStopScreenShare
+                      className="video--icons"
                       /* onClick={() => toggleScreenshare()} */
                       fontSize="3em"
                     />
@@ -203,13 +206,14 @@ function VideoChat() {
                 ) : (
                   <>
                     <MdScreenShare
+                      className="video--icons"
                       /* onClick={() => toggleScreenshare()} */
                       fontSize="3em"
                     />
                   </>
                 )}
 
-                <BsPip onClick={requestPictureInPicture} />
+                <BsPip className="video--icons" onClick={requestPictureInPicture} />
 
                 <FiPhoneOff
                   className="call--icons call-icons-phone"

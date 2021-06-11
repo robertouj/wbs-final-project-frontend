@@ -29,8 +29,11 @@ label {
 }
 .register--word--profile {
   color: #d8c945;
-  font-weight: 600;
 }
+
 .register--form > h3 {
   color: rgb(253, 236, 236);
+}
+.register--link {
+  color: #d8c945 !important;
 }

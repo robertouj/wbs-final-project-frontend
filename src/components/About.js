@@ -3,7 +3,10 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap/';
 import "./About.css"
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
-import ahmad from '../img/ahmad.jpg'
+import ahmad from '../img/ahmad5.jpg'
+import daniel from '../img/Daniel.JPG'
+import roberto from '../img/roberto2.jpg'
+import dimitris from '../img/dimitris3.jpg'
 
 export default function About()
 {
@@ -28,7 +31,7 @@ export default function About()
                 <Row className="rows">
                     <Col className="columns " >
                         <Card className="mx-auto mb-4" style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="./Dimitris photo.JPG" />
+                            <Card.Img variant="top" src={dimitris} />
                             <Card.Body>
                                 <Card.Title className="text-muted card--title">Dimitris</Card.Title>
                                 <Card.Subtitle className="mb-2 ">Frontend Team, Barrel Rider</Card.Subtitle>
@@ -64,9 +67,12 @@ export default function About()
                             </Card.Body>
                         </Card>
                     </Col>
+                    </Row>
+                    <Row>
+                        
                     <Col className="columns">
                         <Card className="mx-auto mb-4" style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg" />
+                            <Card.Img variant="top" src={roberto} />
                             <Card.Body>
                                 <Card.Title className="text-muted card--title">Roberto</Card.Title>
                                 <Card.Subtitle className="mb-2">Product Owner, Scrum Master, Debugging Master, Backend Team</Card.Subtitle>
@@ -83,7 +89,7 @@ export default function About()
                     </Col>
                     <Col className="columns">
                         <Card className="mx-auto mb-4" style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg" />
+                            <Card.Img variant="top" src={daniel} />
                             <Card.Body>
                                 <Card.Title className="text-muted card--title">Daniel</Card.Title>
                                 <Card.Subtitle className="mb-2 ">Backend Team</Card.Subtitle>
@@ -100,6 +106,7 @@ export default function About()
                         </Card>
                     </Col>
 
+                    
                 </Row>
             </Container>
 

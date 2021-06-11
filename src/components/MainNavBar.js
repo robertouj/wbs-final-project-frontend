@@ -7,6 +7,7 @@ import Login from "./Login";
 import SearchBar from "./SearchBar";
 import logo from '../img/logo1.png'
 import About from "./About";
+import "./MainNavBar.css"
 
 export default function MainNavBar()
 {
@@ -20,7 +21,7 @@ export default function MainNavBar()
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto me-4 justify-content-between">
+          <Nav className="ms-auto me-4 justify-content-between navbar--links" >
             <Nav.Link>
               <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/">
                 Home
@@ -28,22 +29,22 @@ export default function MainNavBar()
             </Nav.Link>
             <Nav.Link>
               <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/About">
-                about
+                About
               </Link>
             </Nav.Link>
             <Nav.Link>
               <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/profile/about-me">
-                profile
+                Profile
               </Link>
             </Nav.Link>
             <Nav.Link>
               <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/login">
-                login
+                Login
               </Link>
             </Nav.Link>
             <Nav.Link>
               <Link style={{ textDecoration: "none", color: '#ffd8cc' }} to="/register">
-                register
+                Register
               </Link>
             </Nav.Link>
           </Nav>

@@ -55,6 +55,7 @@ const fakeSkills = [
     name: "Dota2",
   },
   {
+
     _id: "60c24f2d03e4e669a73cef56",
     name: "Barrel Rider",
   },
@@ -81,7 +82,6 @@ export default function Skills({ skills, me })
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>Skills</h1>
-      <h3 style={{ textAlign: 'center' }}>bla bla bla</h3>
 
       <Container >
         <Row >

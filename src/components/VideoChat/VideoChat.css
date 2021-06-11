@@ -1,14 +1,18 @@
 .test {
-  background-color: rgb(80, 78, 78);
+  /* background-color: rgb(80, 78, 78); */
   min-height: 100vh;
   min-width: 100%;
   border: white;
+  background-image: url(/src/img/3649732.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .test2 {
   background-color: rgb(80, 78, 78);
 }
 .footer--container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(235, 227, 227);
   position: absolute;
   top: 90.3%;
   right: 35%;
@@ -19,7 +23,9 @@
 .call--icons {
   color: rgb(80, 78, 78);
   font-size: 3rem;
-  margin: 1rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .call-icons-phone {
   color: red;
@@ -46,4 +52,16 @@
   left: 0%;
   height: 100%;
   width: 100%;
+}
+/* body {
+  background-image: url(/src/img/3649732.jpg);
+} */
+.video--icons {
+  color: rgb(80, 78, 78);
+  font-size: 3.5rem;
+  padding: 2px;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
