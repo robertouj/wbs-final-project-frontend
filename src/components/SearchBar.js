@@ -40,8 +40,10 @@ export default function SearchBar()
 
     const searchHandler = (e) =>
     {
+        setSearchQuery('');
+        console.log(searchQuery);
+
         setSearchQuery(e.target.value.toLowerCase());
-        // console.log(setResults);
     }
 
     const handelEnter = e =>
