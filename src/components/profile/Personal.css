@@ -1,5 +1,7 @@
 .personal--container {
-  border: 0.2rem solid black;
+  border: 0.1rem solid black;
+  background-color: rgb(150,93,152,0.95);
+
 }
 .personal--container * label {
   color: black !important;

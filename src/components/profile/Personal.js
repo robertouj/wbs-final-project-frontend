@@ -2,10 +2,11 @@ import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import "./Personal.css"
 
-export default function Personal() {
+export default function Personal()
+{
   return (
     <>
-      <h1>About me</h1>
+      <h1 style={{ textAlign: 'center' }}>About me</h1>
       <Container className="personal--container">
         <Row>
           <Col className="d-flex justify-content-center">
@@ -15,13 +16,13 @@ export default function Personal() {
                 <h3>Account details</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, asperiores.</p>
                 <label for="foro">Your avatar</label>
-                <Image className="personal--img" src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg"/>
+                <Image className="personal--img" src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg" />
                 <input
                   type="file"
                   className="name"
                   required
                   placeholder="send a photo..."
-                  />
+                />
                 <label for="name">Username</label>
                 <input
                   type="text"
