@@ -51,7 +51,7 @@ const BreadCrumbNav = ({ me, setMe }) =>
                 <Personal />
               </Route>
               <Route path="/profile/skills">
-                <Skills skills={me.skills} />
+                <Skills me={me} skills={me.skills} />
               </Route>
               <Route path="/profile/schedule">
                 <Schedule />

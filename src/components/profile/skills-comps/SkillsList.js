@@ -19,6 +19,11 @@ const SkillsList = ({ me, newSkills,  setNewSkills }) => {
   // console.log(skillsData)
   //console.log(newSkills)
 
+  const deleteHandler = (id) => {
+    console.log(newSkills);
+    setNewSkills(newSkills.filter((skill) => skill._id !== id));
+  };
+
   console.log(me);
   return (
     <>
@@ -43,7 +48,7 @@ const SkillsList = ({ me, newSkills,  setNewSkills }) => {
             {newSkills.map((skill, index) => (
               <>
                 <Col>
-                  <Skill me={me} skill={skill} newSkills={newSkills} setNewSkills={setNewSkills} key={index} />{" "}
+                  <Skill me={me} skill={skill} newSkills={newSkills} setNewSkills={setNewSkills} key={index} deleteHandler={deleteHandler} />{" "}
                 </Col>
               </>
             ))}

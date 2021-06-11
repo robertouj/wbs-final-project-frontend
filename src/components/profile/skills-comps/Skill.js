@@ -3,11 +3,8 @@ import { Row, Col, Button, Form, Container } from "react-bootstrap";
 import { RiDeleteBin2Line } from "react-icons/ri";
 import "./Skill.css";
 
-export default function Skill({ me, skill, newSkills, setNewSkills }) {
-  const deleteHandler = (id) => {
-    console.log(newSkills);
-    setNewSkills(newSkills.filter((skill) => skill._id !== id));
-  };
+export default function Skill({ me, skill, newSkills, setNewSkills, deleteHandler }) {
+  
   // console.log(skills)
   return (
     <Container className="skill--test">
@@ -27,9 +24,9 @@ export default function Skill({ me, skill, newSkills, setNewSkills }) {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <Button style={{ backgroundColor: "#b6c9f0" }}>
+          <Button style={{ backgroundColor: "#b6c9f0" }}  onClick={() => deleteHandler(skill._id)}>
             {" "}
-            <RiDeleteBin2Line onClick={() => deleteHandler(skill._id)} />{" "}
+            <RiDeleteBin2Line />{" "}
           </Button>
         </div>
       </Col>
