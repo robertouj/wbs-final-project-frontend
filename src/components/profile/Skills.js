@@ -80,8 +80,8 @@ export default function Skills({ me })
 
   return (
     <>
-      <h1>Skills</h1>
-      <h3>bla bla bla</h3>
+      <h1 style={{ textAlign: 'center' }}>Skills</h1>
+      <h3 style={{ textAlign: 'center' }}>bla bla bla</h3>
 
       <Container >
         <Row >

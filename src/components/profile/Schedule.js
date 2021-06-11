@@ -15,7 +15,7 @@ export default function Schedule()
   return (
     <>
 
-      <h1>Schedule</h1>
+      <h1 style={{ textAlign: 'center' }}>Schedule</h1>
       <Container >
 
         <Row className="schedule--container">
@@ -28,7 +28,7 @@ export default function Schedule()
             sm={{ span: 12 }}
             xs={{ span: 12 }}
           >
-            <Button variant="outline-warning " 
+            <Button variant="outline-warning "
               onClick={NewTab}><CgMediaLive /> Live Session </Button>
             <Cal />
           </Col>
