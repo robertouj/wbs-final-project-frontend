@@ -68,7 +68,7 @@ const fakeSkills = [
   }
 ];
 
-export default function Skills({ me })
+export default function Skills({ skills })
 {
 
 
