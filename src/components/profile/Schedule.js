@@ -21,7 +21,7 @@ export default function Schedule()
         <Row className="schedule--container">
 
 
-          <Col
+          <Col className="text-center"
             xl={{ span: 10 }}
             lg={{ span: 10 }}
             md={{ span: 10, offset: 1 }}
