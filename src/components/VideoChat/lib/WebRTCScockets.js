@@ -38,8 +38,8 @@ function sendMessageChat(msg) {
  * User media (webcam)
  ****************************************************************************/
 
-async function createMedia(video, setStream) {
-  await navigator.mediaDevices
+function createMedia(video, setStream) {
+   navigator.mediaDevices
     .getUserMedia({ video: true, audio: true })
     .then((currentStream) => {
       setStream(currentStream);

@@ -4,8 +4,8 @@ import {
   createMedia,
   startSocket,
   getMe,
-  answerCall,
   sendMessageChat,
+  answerCall,
 } from "./lib/WebRTCScockets";
 
 const SocketContext = createContext();
@@ -45,7 +45,7 @@ function ContextProvider({ children }) {
 
   useEffect(() => {
     if (call.signal)
-      answerCall(stream, call, userVideo, connectionRef, setRemoteName, name);
+      answerCall(stream, call, userVideo, connectionRef, name);
   }, [call]);
 
   useEffect(() => {
