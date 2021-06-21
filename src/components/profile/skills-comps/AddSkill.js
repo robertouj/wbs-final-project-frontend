@@ -42,6 +42,7 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills }) {
         },
       ]);
       setText("");
+      searchInput.current.value = "";
     }
   };
 
@@ -56,6 +57,7 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills }) {
       },
     ]);
     setText("");
+    searchInput.current.value = "";
   };
   // console.log(skills)
   return (
