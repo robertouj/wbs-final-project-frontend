@@ -40,7 +40,7 @@ function ContextProvider({ children }) {
     getMe(setMe, setCall, setRemoteName);
     setTimeout(() => {
       startSession()
-    }, 3000);
+    }, 2500);
   }, []);
 
   useEffect(() => {
