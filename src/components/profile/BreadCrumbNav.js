@@ -1,13 +1,12 @@
 import { Link, Switch, Route } from "react-router-dom";
-import { Breadcrumb, Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import Personal from "./Personal";
 import Skills from "./Skills";
 import Schedule from "./Schedule";
 import Wallet from "./Wallet";
 import "./BreadCrumNav.css";
 
-const BreadCrumbNav = ({ me, setMe }) =>
-{
+const BreadCrumbNav = ({ me }) => {
   return (
     <>
       <Container className="my-5 py-5 ">
@@ -18,26 +17,46 @@ const BreadCrumbNav = ({ me, setMe }) =>
               variant="tabs"
               defaultActiveKey="/home"
               className="miniNav"
-
             >
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/profile/about-me" style={{ textDecoration: 'none', color: '#3f3697' }} defaultActiveKey="/home">About me</Link>
+                  <Link
+                    to="/profile/about-me"
+                    style={{ textDecoration: "none", color: "#3f3697" }}
+                    defaultActiveKey="/home"
+                  >
+                    About me
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-1">
-                  <Link to="/profile/skills" style={{ textDecoration: 'none', color: '#3f3697' }}>My Skills</Link>
+                  <Link
+                    to="/profile/skills"
+                    style={{ textDecoration: "none", color: "#3f3697" }}
+                  >
+                    My Skills
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  <Link to="/profile/schedule" style={{ textDecoration: 'none', color: '#3f3697' }}>My Schedule</Link>
+                  <Link
+                    to="/profile/schedule"
+                    style={{ textDecoration: "none", color: "#3f3697" }}
+                  >
+                    My Schedule
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-3">
-                  <Link to="/profile/wallet" style={{ textDecoration: 'none', color: '#3f3697' }}>TimeCoin Wallet</Link>
+                  <Link
+                    to="/profile/wallet"
+                    style={{ textDecoration: "none", color: "#3f3697" }}
+                  >
+                    TimeCoin Wallet
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -47,7 +66,7 @@ const BreadCrumbNav = ({ me, setMe }) =>
         <Row>
           <Col className="justify-content-center mt-5">
             <Switch>
-              <Route path="/profile/about-me" >
+              <Route path="/profile/about-me">
                 <Personal />
               </Route>
               <Route path="/profile/skills">

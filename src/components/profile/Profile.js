@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
 import BreadCrumbNav from "./BreadCrumbNav";
 
 const APIURL = "https://wbs-final-json-api.herokuapp.com/users";
@@ -79,7 +78,6 @@ const Profile = () => {
       .then((json) => {
         const mentors = json.data;
         const me = mentors.find(({ _id }) => _id === meId);
-        //setMe(me);
         me.skills = fakeSkills;
         setMe(me);
         setIsLoading(false);
@@ -87,7 +85,6 @@ const Profile = () => {
       .catch(() => console.log("request failed "));
   }, []);
 
-  //console.log(me);
   return (
     <>
       <div className="profile">

@@ -1,52 +1,11 @@
-import {
-  InputGroup,
-  Button,
-  FormControl,
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import { ObjectID } from "bson";
-
 import React, { useRef } from "react";
 
-export default function AddSkill({ text, setText, newSkills, setNewSkills }) {
+export default function AddSkill({ setText, newSkills, setNewSkills, me }) {
   const searchInput = useRef();
-  const listenHandler = (i) => {
-    setText(i.target.value);
-  };
 
-  // const enterHandler = (e) => {
-  //   if (e.key === "Enter" && e.target.value) {
-  //     e.preventDefault();
-  //     setNewSkills([
-  //       ...newSkills,
-  //       {
-  //         text,
-  //         id: Math.random() * 1000,
-  //       },
-  //     ]);
-  //     setText("");
-  //   }
-  // };
-
-  const enterHandler = (e) => {
-    if (e.key === "Enter" && e.target.value) {
-      const objectId = new ObjectID();
-      console.log(searchInput.current.value);
-      setNewSkills([
-        ...newSkills,
-        {
-          name: searchInput.current.value,
-          id: objectId,
-        },
-      ]);
-      setText("");
-      searchInput.current.value = "";
-    }
-  };
-
-  const clickHandler = (e) => {
+  const addSkill = () => {
     const objectId = new ObjectID();
     console.log(searchInput.current.value);
     setNewSkills([
@@ -57,9 +16,18 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills }) {
       },
     ]);
     setText("");
+    me.skills = newSkills;
     searchInput.current.value = "";
   };
-  // console.log(skills)
+
+  const enterHandler = (e) => {
+    if (e.key === "Enter" && searchInput.current.value) addSkill();
+  };
+
+  const clickHandler = () => {
+    if (searchInput.current.value) addSkill();
+  };
+
   return (
     <>
       <Container className="mb-5">
@@ -73,10 +41,8 @@ export default function AddSkill({ text, setText, newSkills, setNewSkills }) {
             <input
               id="skill"
               name="skill"
-              // onChange={listenHandler}
               onKeyPress={enterHandler}
               type="text"
-              // value={text}
               placeholder="type a skill..."
               style={{ height: "2.57rem", width: "220px" }}
               ref={searchInput}
