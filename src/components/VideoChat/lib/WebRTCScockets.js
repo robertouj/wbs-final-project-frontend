@@ -3,8 +3,8 @@
  ****************************************************************************/
 
 //const SERVER = "http://localhost:5000";
-const SERVER = "https://wbs-fp-videochat-test.herokuapp.com/";
-//const SERVER = "https://wbs-final-json-api.herokuapp.com/";
+//const SERVER = "https://wbs-fp-videochat-test.herokuapp.com/";
+const SERVER = "https://wbs-final-json-api.herokuapp.com/";
 var io;
 var socket;
 const Peer = require("simple-peer");
@@ -39,7 +39,7 @@ function sendMessageChat(msg) {
  ****************************************************************************/
 
 function createMedia(video, setStream) {
-  navigator.mediaDevices
+   navigator.mediaDevices
     .getUserMedia({ video: true, audio: true })
     .then((currentStream) => {
       setStream(currentStream);
