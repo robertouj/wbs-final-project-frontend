@@ -7,12 +7,11 @@ export default function AddSkill({ setText, newSkills, setNewSkills, me }) {
 
   const addSkill = () => {
     const objectId = new ObjectID();
-    console.log(searchInput.current.value);
     setNewSkills([
       ...newSkills,
       {
-        name: searchInput.current.value,
-        id: objectId,
+        _id: String(objectId),
+        name: searchInput.current.value,        
       },
     ]);
     setText("");
