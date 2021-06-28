@@ -9,6 +9,8 @@ export default function Skills({ me }) {
   const [newSkills, setNewSkills] = useState(me.skills);
   const [name, setName] = useState([]);
 
+  console.log(newSkills);
+
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Skills</h1>

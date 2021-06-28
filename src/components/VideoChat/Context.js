@@ -38,6 +38,7 @@ function ContextProvider({ children }) {
   useEffect(() => {
     checkSessionAvailability();
     getMe(setMe, setCall, setRemoteName);
+<<<<<<< HEAD
     setTimeout(() => {
       startSession()
     }, 2500);
@@ -46,6 +47,16 @@ function ContextProvider({ children }) {
   useEffect(() => {
     if (call.signal)
       answerCall(stream, call, userVideo, connectionRef, name);
+=======
+    setTimeout(async () => {
+      await startSession();
+    }, 1500);
+    
+  }, []);
+
+  useEffect(() => {
+    if (call.signal) answerCall(stream, call, userVideo, connectionRef, name);
+>>>>>>> 86f49bf0a16f4e98394aaaa4dc6f57a7fda18b9d
   }, [call]);
 
   useEffect(() => {
@@ -66,7 +77,9 @@ function ContextProvider({ children }) {
 
   const initRoom = () => {
     // href.substring(this.href.lastIndexOf('/') + 1)
-    const roomId = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+    const roomId = window.location.href.substring(
+      window.location.href.lastIndexOf("/") + 1
+    );
     console.log(roomId);
     setRoom(roomId);
   };
@@ -83,13 +96,7 @@ function ContextProvider({ children }) {
     // });
 
     initRoom(isSessionAvailable);
-    startSocket(
-      room,
-      setInitCall,
-      setUserToCall,
-      setChat,
-      name
-    );
+    startSocket(room, setInitCall, setUserToCall, setChat, name);
     createMedia(myVideo, setStream);
   };
 
