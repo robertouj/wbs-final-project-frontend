@@ -1,16 +1,18 @@
 import React, { createContext, useState, useRef, useEffect } from "react";
-import {
-  callUser,
-  createMedia,
-  startSocket,
-  getMe,
-  sendMessageChat,
-  answerCall,
-} from "./lib/WebRTCScockets";
+import
+  {
+    callUser,
+    createMedia,
+    startSocket,
+    getMe,
+    sendMessageChat,
+    answerCall,
+  } from "./lib/WebRTCScockets";
 
 const SocketContext = createContext();
 
-function ContextProvider({ children }) {
+function ContextProvider({ children })
+{
   const [isSessionAvailable, setIsSessionAvailable] = useState(false);
   const [room, setRoom] = useState("");
   const [stream, setStream] = useState();
@@ -35,31 +37,48 @@ function ContextProvider({ children }) {
   const userVideo = useRef();
   const connectionRef = useRef();
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     checkSessionAvailability();
     getMe(setMe, setCall, setRemoteName);
-<<<<<<< HEAD
-    setTimeout(() => {
+
+    setTimeout(() =>
+    {
       startSession()
     }, 2500);
   }, []);
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     if (call.signal)
       answerCall(stream, call, userVideo, connectionRef, name);
-=======
-    setTimeout(async () => {
+
+    setTimeout(async () =>
+    {
       await startSession();
     }, 1500);
-    
+
   }, []);
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     if (call.signal) answerCall(stream, call, userVideo, connectionRef, name);
->>>>>>> 86f49bf0a16f4e98394aaaa4dc6f57a7fda18b9d
+
+    setTimeout(async () =>
+    {
+      await startSession();
+    }, 1500);
+
+  }, []);
+
+  useEffect(() =>
+  {
+    if (call.signal) answerCall(stream, call, userVideo, connectionRef, name);
+
   }, [call]);
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     if (initCall && stream) {
       if (userToCall)
         callUser(
@@ -75,7 +94,8 @@ function ContextProvider({ children }) {
     }
   }, [stream, initCall]);
 
-  const initRoom = () => {
+  const initRoom = () =>
+  {
     // href.substring(this.href.lastIndexOf('/') + 1)
     const roomId = window.location.href.substring(
       window.location.href.lastIndexOf("/") + 1
@@ -87,7 +107,8 @@ function ContextProvider({ children }) {
   /**
    * Actions when the Start button is pressed
    */
-  const startSession = () => {
+  const startSession = () =>
+  {
     //TODO: Control the states
     // setStates({
     //   ...states,
@@ -100,7 +121,8 @@ function ContextProvider({ children }) {
     createMedia(myVideo, setStream);
   };
 
-  const checkSessionAvailability = () => {
+  const checkSessionAvailability = () =>
+  {
     //TODO: implement the uuid hash
     // Now the has is faked
     // Need Check with the database. If there isn't session, the process stop.
@@ -108,7 +130,8 @@ function ContextProvider({ children }) {
   };
 
   //TODO: end the connection when click in the button, like in the example
-  const leaveCall = () => {
+  const leaveCall = () =>
+  {
     //TODO: Control the states
     // setStates({
     //   ...states,
@@ -118,9 +141,10 @@ function ContextProvider({ children }) {
   };
 
   /********************** chat **********************/
-  const sendMessage = (chatText) => {
-    sendMessageChat([...chat, `${name}: ${chatText}`]);
-    setChat([...chat, `${name}: ${chatText}`]);
+  const sendMessage = (chatText) =>
+  {
+    sendMessageChat([...chat, `${ name }: ${ chatText }`]);
+    setChat([...chat, `${ name }: ${ chatText }`]);
   };
 
   return (
