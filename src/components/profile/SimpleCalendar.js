@@ -3,7 +3,8 @@ import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { Calendar } from "react-modern-calendar-datepicker";
 import { Col, Container, Row } from "react-bootstrap";
 
-const Cal = () => {
+const Cal = () =>
+{
   const [selectedDay, setSelectedDay] = useState(null);
   return (
     <>
@@ -17,6 +18,7 @@ const Cal = () => {
             />
           </Col>
         </Row>
+
       </Container>
     </>
   );

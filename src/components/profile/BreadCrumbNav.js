@@ -6,10 +6,18 @@ import Schedule from "./Schedule";
 import Wallet from "./Wallet";
 import "./BreadCrumNav.css";
 
-const BreadCrumbNav = ({ me }) => {
+const BreadCrumbNav = ({ me }) =>
+{
+
+
+  const clickHandler = (i) =>
+  {
+    console.log(i)
+  }
   return (
     <>
       <Container className="my-5 py-5 ">
+
         <Row>
           <Col>
             <Nav
@@ -62,7 +70,6 @@ const BreadCrumbNav = ({ me }) => {
             </Nav>
           </Col>
         </Row>
-
         <Row>
           <Col className="justify-content-center mt-5">
             <Switch>
@@ -88,3 +95,51 @@ const BreadCrumbNav = ({ me }) => {
 };
 
 export default BreadCrumbNav;
+
+
+
+
+
+
+
+// <Row>
+// <Col>
+// <div className="miniNav">
+//   <ul>
+//     <li onClick={clickHandler}>
+//       <Link
+//         to="/profile/about-me"
+//         style={{ textDecoration: "none", color: "#3f3697" }}
+//         active="false"
+//       >
+//         About me
+//       </Link>
+//     </li>
+//     <li>
+//       <Link
+//         to="/profile/skills"
+//         style={{ textDecoration: "none", color: "#3f3697" }}
+//       >
+//         My Skills
+//       </Link>
+//     </li>
+//     <li>
+//       <Link
+//         to="/profile/schedule"
+//         style={{ textDecoration: "none", color: "#3f3697" }}
+//       >
+//         My Schedule
+//       </Link>
+//     </li>
+//     <li>
+//       <Link
+//         to="/profile/wallet"
+//         style={{ textDecoration: "none", color: "#3f3697" }}
+//       >
+//         TimeCoin Wallet
+//       </Link>
+//     </li>
+//   </ul>
+// </div>
+// </Col>
+// </Row>
