@@ -22,7 +22,7 @@ const BreadCrumbNav = ({ me, setMe }) =>
             >
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/profile/about-me" style={{ textDecoration: 'none', color: '#3f3697' }} defaultActiveKey="/home">About me</Link>
+                  <Link to="/profile/about-me"  style={{ textDecoration: 'none', color: '#3f3697' }} defaultActiveKey="/home">About me</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
