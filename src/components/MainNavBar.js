@@ -41,20 +41,31 @@ export default function MainNavBar() {
               )}
             </Nav.Link>
             <Nav.Link>
-              <Link
-                style={{ textDecoration: "none", color: "#ffd8cc" }}
-                to="/login"
-              >
-                Login
-              </Link>
+              {isLoggedIn() ? (
+                <Link
+                  style={{ textDecoration: "none", color: "#ffd8cc" }}
+                  to="/logout"
+                >
+                  Logout
+                </Link>
+              ) : (
+                <Link
+                  style={{ textDecoration: "none", color: "#ffd8cc" }}
+                  to="/login"
+                >
+                  Login
+                </Link>
+              )}
             </Nav.Link>
             <Nav.Link>
-              <Link
-                style={{ textDecoration: "none", color: "#ffd8cc" }}
-                to="/register"
-              >
-                Register
-              </Link>
+              {isLoggedIn() && (
+                <Link
+                  style={{ textDecoration: "none", color: "#ffd8cc" }}
+                  to="/register"
+                >
+                  Register
+                </Link>
+              )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
