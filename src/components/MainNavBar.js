@@ -58,7 +58,7 @@ export default function MainNavBar() {
               )}
             </Nav.Link>
             <Nav.Link>
-              {isLoggedIn() && (
+              {!isLoggedIn() && (
                 <Link
                   style={{ textDecoration: "none", color: "#ffd8cc" }}
                   to="/register"

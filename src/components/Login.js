@@ -20,7 +20,6 @@ const Login = () => {
       <section className="auth">
         <h1>Login now</h1>
           <div className="control">
-            <label htmlFor="email">Add your E-mail</label>
             <input
               type="text"
               name="email"
@@ -29,7 +28,6 @@ const Login = () => {
             />
           </div>
           <div className="control">
-            <label htmlFor="password">Add your Password</label>
             <input
               type="password"
               name="password"
