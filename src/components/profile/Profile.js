@@ -88,7 +88,7 @@ const Profile = () => {
   return (
     <>
       <div className="profile">
-        <BreadCrumbNav me={me} />
+        hello
       </div>
     </>
   );

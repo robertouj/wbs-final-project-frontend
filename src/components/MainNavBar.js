@@ -43,8 +43,8 @@ export default function MainNavBar() {
             <Nav.Link>
               {isLoggedIn() ? (
                 <Link
+                  onClick={logout}
                   style={{ textDecoration: "none", color: "#ffd8cc" }}
-                  to="/logout"
                 >
                   Logout
                 </Link>
