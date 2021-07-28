@@ -1,35 +1,53 @@
-import React from 'react'
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { ArrowRight } from 'react-bootstrap-icons';
-import AuthForm from './Auth/AuthForm';
+import React, { useContext } from "react";
+import { Redirect } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
+import useFormData from "../hooks/useFormData";
+import "./Login.css";
 
-export default function Login() {
-    return (
-        <div>
-            <AuthForm />
-             {/* <Container className="m-auto p-3">
-                <Row>
-                    <Col lg={4} md={6} sm={12} className="text-center m-auto p-3">
-                        <img className="icon-img" src={ArrowRight} alt="icon" />
-                        <Form>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Control type="email" placeholder="Enter email" />
-                            </Form.Group>
+const initialFormData = {
+  email: "",
+  password: "",
+};
 
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="password" placeholder="Password" />
-                            </Form.Group>
+const Login = () => {
+  const { login, isLoggedIn } = useContext(AuthContext);
+  const [formData, handleChange] = useFormData(initialFormData);
 
-                            <Button variant="secondary btn-block" type="submit">Login</Button>
+  if (isLoggedIn()) return <Redirect to="/" />;
 
-                            <div className="text-left m-auto">
-                                <a href="#"><small className="reset">Password Reset</small></a> II
-                                                <a href="#"><small className="reset ml-2">I forgot my Password</small></a>
-                            </div>
-                        </Form>
-                    </Col>
-                </Row>
-            </Container> */}
-        </div>
-    )
-}
+  return (
+    <>
+      <section className="auth">
+        <h1>Login now</h1>
+          <div className="control">
+            <label htmlFor="email">Add your E-mail</label>
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              placeholder="email"
+            />
+          </div>
+          <div className="control">
+            <label htmlFor="password">Add your Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              placeholder="password"
+            />
+          </div>
+          <div className="actions">
+            <button
+              type="button"
+              onClick={() => login(formData)}
+            >
+              Login
+            </button>
+          </div>
+      </section>
+    </>
+  );
+};
+
+export default Login;

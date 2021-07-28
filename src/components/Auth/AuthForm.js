@@ -27,16 +27,16 @@ const AuthForm = () => {
               <input type="password" id="password" required />
             </div>
             <div className="actions">
-              <button
-              onClick={switchAuthModeHandler}
-              >{!isLogin ? "Login" : "Create an Account"}</button>
+              <button onClick={switchAuthModeHandler}>
+                {!isLogin ? "Login" : "Create an Account"}
+              </button>
               <button
                 type="button"
                 className="toggle"
                 onClick={switchAuthModeHandler}
               >
                 {isLogin
-                  ? "Login with an existing account" 
+                  ? "Login with an existing account"
                   : "Create new Account"}
               </button>
             </div>
