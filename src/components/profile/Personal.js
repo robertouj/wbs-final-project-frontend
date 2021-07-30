@@ -1,8 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
+import { AuthContext } from "../../AuthContext";
+import { ProfileContext } from "../../ProfileContext";
 import "./Personal.css";
+import jwt from "jsonwebtoken"
+
 
 export default function Personal() {
+
+  // const { authToken } = useContext(AuthContext);
+  // const decoded = jwt.decode(authToken);
+  // console.log(decoded);
+
+  // const { test } = useContext(ProfileContext);
+  // console.log(test);
+
+
+
   return (
     <>
       <h1 className="personal--title" style={{ textAlign: "center" }}>
@@ -82,4 +96,4 @@ export default function Personal() {
       </Container>
     </>
   );
-}
+}useContext
