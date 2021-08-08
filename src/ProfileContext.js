@@ -16,14 +16,17 @@ const initialFormData = {
 const ProfileContextProvider = ({ children }) => {
   const { authToken } = useContext(AuthContext);
   const idUser = jwt.decode(authToken).id;
-  const [user, fetchUser] = useUsersFetch();
+  const [user, fetchUser, updateUser] = useUsersFetch();
   const [formData, setFormData, handleChange] = useFormData(initialFormData);
   const [isLoaded, setIsLoaded] = useState(false);
 
   if (!isLoaded) {
     fetchUser(idUser, authToken, setIsLoaded, setFormData);
-    formData.username = user.username;
   };
+
+  const onSave = () => {
+    updateUser(idUser, authToken, formData);
+  }
 
   return (
     <ProfileContext.Provider
@@ -31,6 +34,7 @@ const ProfileContextProvider = ({ children }) => {
         handleChange,
         user,
         formData,
+        onSave
       }}
     >
       {children}

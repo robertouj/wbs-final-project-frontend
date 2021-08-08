@@ -4,7 +4,7 @@ import { ProfileContext } from "../../ProfileContext";
 import "./Personal.css";
 
 export default function Personal() {
-  const { user, handleChange, formData } = useContext(ProfileContext);
+  const { user, handleChange, formData, onSave } = useContext(ProfileContext);
   //console.log(formData);
 
   return (
@@ -97,7 +97,7 @@ export default function Personal() {
             </Row>
 
             <div className="actions">
-              <button>save</button>
+              <button onClick={onSave}>save</button>
             </div>
           </Container>
         </>
