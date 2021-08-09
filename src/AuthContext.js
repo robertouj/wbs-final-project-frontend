@@ -11,7 +11,6 @@ const AuthContextProvider = ({ children }) => {
   const [authToken, setAuthToken] = useState(userToken);
   const [error, setError] = useState(false);
 
-  console.log(authToken);
   const isLoggedIn = () => {
     return authToken ? true : false;
   };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BreadCrumbNav from "./BreadCrumbNav";
+import ProfileContextProvider from "../../ProfileContext";
 
 const APIURL = "https://wbs-final-json-api.herokuapp.com/users";
 const meId = "60be54163e9bbcd950a171c2";
@@ -59,6 +60,7 @@ const fakeSkills = [
   },
   {
     _id: "60c24b7303e4e669a73cef54",
+
     name: "CSS",
   },
   {
@@ -87,9 +89,11 @@ const Profile = () => {
 
   return (
     <>
-      <div className="profile">
-        <BreadCrumbNav me={me} />
-      </div>
+      <ProfileContextProvider>
+        <div className="profile">
+          <BreadCrumbNav me={me} />
+        </div>
+      </ProfileContextProvider>
     </>
   );
 };

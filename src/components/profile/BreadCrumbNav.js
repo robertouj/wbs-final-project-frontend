@@ -64,22 +64,22 @@ const BreadCrumbNav = ({ me }) => {
         </Row>
 
         <Row>
-          <Col className="justify-content-center mt-5">
-            <Switch>
-              <Route path="/profile/about-me">
-                <Personal />
-              </Route>
-              <Route path="/profile/skills">
-                <Skills me={me} />
-              </Route>
-              <Route path="/profile/schedule">
-                <Schedule />
-              </Route>
-              <Route path="/profile/wallet">
-                <Wallet />
-              </Route>
-              <Route path="/sessions/:room_id"></Route>
-            </Switch>
+          <Col className="justify-content-center mt-5">            
+              <Switch>
+                <Route path="/profile/about-me">
+                  <Personal />
+                </Route>
+                <Route path="/profile/skills">
+                  <Skills me={me} />
+                </Route>
+                <Route path="/profile/schedule">
+                  <Schedule />
+                </Route>
+                <Route path="/profile/wallet">
+                  <Wallet />
+                </Route>
+                <Route path="/sessions/:room_id"></Route>
+              </Switch>            
           </Col>
         </Row>
       </Container>
